@@ -21,7 +21,7 @@ Requirements
 
 Getting started
 ---------------
-- Make a template CentOS do not use swap and have installed ntp in ClouStack
+- Make a template CentOS do not use swap and have installed ntp in CloudStack
 - Place project in /Cassandra
 - Config something in scripts such as CloudStack's ip address, apikey, secretkey, Zabbix's ip address, etc ...
 - Run /Cassandra/scripts/AddVM.py several times to make some new nodes.
