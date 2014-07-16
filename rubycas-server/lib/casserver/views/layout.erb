@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= escape_html @organization %><%= t.label.central_login_title %></title>
+    <link rel="stylesheet" type="text/css" href="<%= escape_html @uri_path %>/themes/<%= escape_html @theme %>/theme.css" />
+    <link rel="stylesheet" type="text/css" href="<%= escape_html @uri_path %>/themes/styles.min.css" />
+    <link rel="icon" type="image/png" href="<%= escape_html @uri_path %>/themes/<%= escape_html @theme %>/favicon.png" />
+  </head>
+
+  <body onload="if (document.getElementById('username')) document.getElementById('username').focus()" class="focusedform">
+    <%= yield %>
+  </body>
+</html>

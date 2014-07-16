@@ -1,0 +1,118 @@
+
+@import 'bootstrap/glyphicons';
+
+body {
+ // font-family: "Open Sans","lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+}
+
+.page-wrapper {
+  width: 95%;
+  margin: 0 auto;
+
+}
+header{
+  position: relative;
+  //padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-top:15px;
+  margin-bottom: 5px;
+}
+
+div.logo-holder {
+  float:left;
+  .logo > a {
+    text-decoration: none;
+  }
+  .logo > a > img {
+    vertical-align: middle;
+    height: 60px;
+  }
+  .logo > a > span {
+    color: rgb(13,94,171);
+    font-weight: bold;
+    font-size: 26px;
+    font-family: "Open Sans","lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+    margin-left: 10px;
+  }
+}
+
+ul.top-nav {
+  float: right;
+  list-style: none;
+  margin-top: 15px;
+  font-family: none;
+  li.nav-link {
+    padding-right: 20px;
+    display: inline-block;
+    color: #2895f1;
+    a {
+      color: #2895f1;
+      text-decoration: none;
+      span {
+        font-size: 19px;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+#new-container {
+  input.form-control {
+display: inline-block;
+width: 200;
+margin-right: 0px;
+height: 30px;
+padding: 1px 12px;
+font-size: 14px;
+line-height: 1.42857143;
+color: #555;
+background-color: #fff;
+background-image: none;
+border: 1px solid #ccc;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+&:focus {
+border-color: #66afe9;
+outline: 0;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+}
+.btn {
+font-weight: 400;
+text-align: center;
+cursor: pointer;
+background-image: none;
+border: 1px solid transparent;
+white-space: nowrap;
+padding: 6px 12px;
+font-size: 14px;
+line-height: 1.42857143;
+border-radius: 4px;
+-webkit-user-select: none;
+color: #333;
+background-color: #fff;
+border-color: #ccc;
+&:hover {
+color: #333;
+background-color: #ebebeb;
+border-color: #adadad;
+}
+}
+}
+
+.locale-changer {
+width: 98%;
+text-align: right;
+color: #aeaeae;
+position: absolute;
+top: 3px;
+span {
+  margin-right: 3px;
+}
+}

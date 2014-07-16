@@ -1,0 +1,68 @@
+#!/bin/bash
+#
+## sethostname.sh: set new hsotname
+#         place in /etc/dhcp/dhclient.d and 'chmod +x sethostname.sh' to enable
+#
+#
+
+echo "cloudstack-sethostname BEGIN"
+python <<END
+import os
+import sys
+import pycurl
+import subprocess
+
+search = 'dhcp-server-identifier'
+dhcpclient = open('/var/lib/dhclient/dhclient-eth0.leases').readlines()[::-1]
+netfile = open('/etc/sysconfig/network').readlines()
+
+
+# Get and return the results from the CloudStack api for the local-hostname
+class Results:
+
+    def __init__(self):
+        self.contents = ''
+
+    def body_callback(self, buf):
+        self.contents = self.contents + buf
+
+# Change the local hostname of the instance if it's different from what's
+# in Cloudstack
+
+
+def changeName(oldname, newname):
+    subprocess.call("sed -i \"s/HOSTNAME=.*/HOSTNAME="+newname+"/\" /etc/sysconfig/network", shell=True)
+    subprocess.call("hostname " + newname, shell=True)
+    # for zabbix agent
+    subprocess.call("sed -i \"s/Hostname=.*/Hostname="+newname+"/\" /etc/zabbix/zabbix_agentd.conf", shell=True)
+
+# Get the current Cloudstack local hostname for the instance and compare
+# it with the actual hostname in the OS.
+def getName(dhcp_server):
+    cs = Results()
+    pycs = pycurl.Curl()
+    #print('http://%s/latest/local-hostname' % dhcp_server)
+    pycs.setopt(pycs.URL, 'http://%s/latest/local-hostname' % dhcp_server)
+    pycs.setopt(pycs.WRITEFUNCTION, cs.body_callback)
+    pycs.perform()
+    pycs.close()
+
+    if os.uname()[1].split('.')[0] == cs.contents.strip():
+        pass
+    else:
+        oldname = os.uname()[1].split('.')[0]
+        newname = cs.contents.strip()
+        print('Need to change hostname')
+        changeName(oldname, newname)
+
+# Lets get started. Read the dhclient file to get the current dhcp (virual
+# router) ip address for the instance
+if __name__ == '__main__':
+    for l in dhcpclient:
+        if search in l:
+            dhcp_server = l.split(" ")[-1].replace(';', '').strip()
+            # print(dhcp_server)
+            getName(dhcp_server)
+            break
+END
+echo "cloudstack-sethostname END"

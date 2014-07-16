@@ -1,0 +1,11 @@
+development:
+      url: "http://localhost:3000"
+      portal_url: "http://202.191.58.55"
+      cas_url: "http://202.191.58.55/cas"
+production:
+      #url: "http://192.168.50.14:8888"
+      #portal_url: "http://192.168.50.14"
+      #cas_url: "http://192.168.50.14/cas"
+      url: "http://bkcloud.net:8888"
+      portal_url: "http://bkcloud.net"
+      cas_url: "http://bkcloud.net/cas"

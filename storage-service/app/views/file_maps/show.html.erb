@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag  'custom' %>
+
+<div class="download-pane well well-lg">
+  <h3 style="text-align: center;word-break: break-all"> <%= @file.file_name %> </h3>
+  <i class="glyphicon glyphicon-folder-close"></i>
+  <div class="file-size">  <%= @file_size %> Mb </div>
+  <p style="text-align: center">
+    <button class="btn btn-primary btn-block" onclick="download_file(this)"> <%= t('download_btn') %> </button>
+  </p>
+</div>
+
+
+
+<script type="text/javascript">
+  var download_file = function() {
+    $('<iframe style="display:none" src="'+"/download?"+"target="+encodeURIComponent('<%= @file.remote_url %>')+'"/>').appendTo("body");
+    $("button").attr('disabled','disabled').html("Downloading ...");
+  }
+
+
+
+</script>

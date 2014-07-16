@@ -1,0 +1,145 @@
+# Sample localization file for Vietnamese. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+vi:
+  login: "Đăng nhập"
+  signup: "Đăng ký"
+  logout: "Thoát"
+  applications: "applications"
+  processing: "cập nhật"
+  connect:
+    title: "Tạo mới"
+    adapter: "Loại"
+    connection_name: "Tên Cơ sở dữ liệu"
+    connection_name_placeholder: "URL Friendly Connection Name"
+    host: "Host"
+    host_placeholder: "127.0.0.1"
+    username: "Tên người dùng"
+    username_placeholder: "tên người dùng"
+    database: "Cơ sở dữ liệu"
+    database_placeholder: "Cơ sở dữ liệu"
+    password: "Mật khẩu"
+    password_placeholder: "mật khẩu"
+    socket: "Socket"
+    socket_placeholder: "socket"
+  database_connection:
+    structure: 'Cấu trúc'
+    content: 'Nội dung'
+  adapters:
+    unsupported_adapter: "Không hỗ trợ '%{adapter}'"
+    mongodb:
+      title: "MongoDB"
+      result:
+        one: "document"
+        other: "documents"
+      collection:
+        one: "collection"
+        other: "collections"
+    rethinkdb:
+      title: "RethinkDB"
+      result:
+        one: "document"
+        other: "documents"
+      collection:
+        one: "collection"
+        other: "collections"
+    mysql:
+      title: "MySQL"
+      result:
+        one: "bản ghi"
+        other: "các bản ghi"
+      collection:
+        one: "bảng"
+        other: "các bảng"
+    mysql2:
+      title: "MySQL"
+      result:
+        one: "bản ghi"
+        other: "các bản ghi"
+      collection:
+        one: "bảng"
+        other: "các bảng"
+    postgresql:
+      title: "PostgreSQL"
+      result:
+        one: "record"
+        other: "records"
+      collection:
+        one: "table"
+        other: "tables"
+    sqlite:
+      title: "SQLite"
+      result:
+        one: "record"
+        other: "records"
+      collection:
+        one: "table"
+        other: "tables"
+    sqlite2:
+      title: "SQLite"
+      result:
+        one: "record"
+        other: "records"
+      collection:
+        one: "table"
+        other: "tables"
+    sqlite3:
+      title: "SQLite"
+      result:
+        one: "record"
+        other: "records"
+      collection:
+        one: "table"
+        other: "tables"
+
+  flash:
+    notice:
+      invalid_adapter: "Cấu hình cơ sở dũ liệu %{adapter} cho %{app} không load được."
+
+  modals:
+    cancel: "Huỷ"
+    ok: "Ok"
+    coming_soon: "Đang phát triển"
+    create_table: "Tạo Bảng"
+    create_table_placeholder: "Tên bảng"
+    no_of_field: "Số cột"
+    not_supported: "Tính năng này tạm thời chưa được hỗ trợ."
+    error:
+      title: "Chương trình gặp lỗi"
+    database:
+      info: "Thông tin cở sở dữ liệu"
+      confirm_delete:
+        title: "Xác nhận xoá"
+        body: "Xác nhận xoá bản ghi (%{primary_key} = %{id})? Dữ liệu đã xoá không thể phục hồi!"
+        dropdb: "Xác nhận xoá cơ sở dữ liệu (%{database_name})?  Dữ liệu đã xoá không thể phục hồi!"
+        droptable: "Xác nhận xoá bảng (%{table_name})?  Dữ liệu đã xoá không thể phục hồi!"
+        ok: "Xoá"
+        cancel: "Huỷ"
+    connection_name:
+      invalid:
+        title: "Tên cơ sở dữ liệu không phủ hợp"
+        body: "Tên cơ sở dữ liệu không được để trống"
+    settings:
+      title: "Cấu hình"
+      close: "Huỷ"
+      apply: "Áp dụng"
+      cancel: "Huỷ"
+      form:
+        limit:
+          label: "Giới hạn số lượng bản ghi"
+
+  pages:
+    error:
+      title: "Xuất hiện lỗi"
+      try_again: 'Thử lại'
+    help:
+      user_manual: "Hướng dẫn sử dụng"
+      issue_tracker: "Kiểm lỗi"
+    unauthorized:
+      title: "Incomplete Configuration"
+      message: "Labrador requires HTTP Basic Authentication environment variables to protect your development databases from unauthorized access."
+      explanation: "Add your <code>ENV['LABRADOR_USER']</code> and <code>ENV['LABRADOR_PASS']</code> credentials to the file <br/><code>%{path}</code><br/>and restart your server."
+
+  status:
+    requesting: "đang cập nhật %{collection}"
+    showing: "đang hiển thị %{count} %{results}"

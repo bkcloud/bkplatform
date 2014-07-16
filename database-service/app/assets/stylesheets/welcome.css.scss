@@ -1,0 +1,28 @@
+#welcome {
+  #logo-wrapper {
+    padding-top: 100px;
+    text-align: center;
+    margin-bottom: 100px;
+    &.index {
+      padding-top: 50px;
+    }
+  }
+  .getting-started {
+    width: 600px;
+    display: inline-block;
+    margin-right: 20px;
+    button {
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  .btn-xlarge {
+    padding: 18px 28px;
+    font-size: 22px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+  }
+}

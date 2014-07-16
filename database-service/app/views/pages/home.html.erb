@@ -1,0 +1,39 @@
+<% content_for :sidebar do %>
+  <% current_app.adapters.each do |adapter| %>
+    <ul class="nav nav-list">
+      <li class="nav-header">
+        <b><%= current_app %></b> <%= adapter.database.collection_name(2) %> <i class="glyphicon glyphicon-remove" data-action="delete-database" data-disabled="false" style="color: red; cursor: pointer;"></i>
+        <button type="button" onclick="$(this).popover('show')" class="btn btn-inverse btn-mini" data-toggle="popover" data-placement="bottom" title="<%= t('modals.database.info') %>" data-content="<%= t('connect.host') %>: <%=adapter.configuration["host"] %><br/><%= t('connect.username') %>: <%= adapter.configuration["username"] %> <br/><%= t('connect.password') %>: <%= adapter.configuration["password"] %>">Info</button>
+        <script>
+          $('[data-toggle=popover]').popover({ trigger: 'manual', html: true });
+          $('html').click(function(e){
+            if(!$(e.target.offsetParent).is('.popover') && !$(e.target).is('[data-toggle=popover]')) {
+              $('[data-toggle=popover]').popover('hide')
+            }
+          })
+        </script>
+      </li>
+    </ul>
+    <ul class="nav nav-list" data-view="collections">
+      <% adapter.database.collections.each do |collection| %>
+        <li>
+          <a href='#' data-adapter='<%= adapter.name %>' data-collection='<%= collection %>'><i class="icon-list"></i> <%= collection %></a>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>
+
+<div id='find-progress' class="progress progress-striped active">
+  <div class="bar"></div>
+</div>
+<div class="fixed-table-container">
+  <table class="table table-condensed">
+    <thead>
+      <tr class="odd">
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,87 @@
+#!/bin/bash
+
+RESPONSE=/var/log/bksync-res.log
+CONFIGFILE=$1
+
+eval `ssh-agent` >> /var/log/bksync-auth.log 2>&1
+ssh-add ~/.ssh/bkswift_id_rsa >> /var/log/bksync-auth.log 2>&1
+
+set -e
+
+if [ -z $1 ]; then
+   echo "config file is unset";
+   exit 1;
+fi
+
+if [ ! -f $1 ]; then
+  echo "config file not found";
+  exit 1;
+fi
+
+eval `sed '/^ *#/d;s/:/ /;' < "$CONFIGFILE" | while read key val
+do
+    #verify here
+    #...
+    str="$key='$val'"
+    echo "$str"
+done`
+
+if [ -z ${host+x} ]; then
+   echo "host is unset";
+   exit 1;
+fi
+
+if [ -z ${path+x} ]; then
+   echo "path is unset";
+   exit 1;
+fi
+
+if [ ! -d $path ];then
+  echo "Path not found"
+  rm -rf /var/log/bksync-old-list.txt
+  rm -rf /tmp/bksync-current-list.txt
+  exit 1
+fi
+
+if [ -z ${interval+x} ]; then
+   echo "interval is unset";
+   exit 1;
+fi
+
+if [ -z ${email+x} ] || [ -z ${password+x} ]; then  
+   echo "Email/Password are unset"  
+   echo "Please login to continue"
+   echo "########################"
+   echo -n "Email: "
+   read email
+   echo -n "Password: "
+   read -s password
+fi
+
+
+status=$(curl -sL -w "%{http_code}\\n" -H "X-Auth-User: $email" -H "X-Auth-Pass: $password" "$host/auth" -o $RESPONSE)
+text=$(cat $RESPONSE)
+RES_LOCAL=$text
+
+case "$status" in
+"200")
+    echo "######################"
+    echo "Authentication Success!"
+    echo "Testing connection ... "
+    RETVAL=0
+    #rsync -anvzru "$host:$text/" "$path/" > /dev/null 2>&1 ||  RETVAL=1
+    rsync -anvzru -e "ssh -i /home/$(whoami)/.ssh/bkswift_id_rsa"  "bkstorage@$host:$text/" "$path/"  ||  RETVAL=1
+    exit $RETVAL
+    ;;
+"401")
+    echo "######################"
+    echo "Authentication Failed!"
+    echo $text
+    exit 1
+    ;;
+*)
+    exit 1
+    echo "Service not available"
+    ;;
+esac
+

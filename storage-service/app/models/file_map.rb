@@ -1,0 +1,3 @@
+class FileMap < ActiveRecord::Base
+  belongs_to :user
+end

@@ -1,0 +1,50 @@
+<%= stylesheet_link_tag  'custom' %>
+
+<!--
+<div class="welcome-block">
+  <div class="row welcome-logo text-center">
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-4">
+      <a href="http://123.30.234.253:3000/users/sign_up?redirect_url=localhost">
+        <button class="btn btn-primary btn-block">Sign Up </button>
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="<%= CASClient::Frameworks::Rails::Filter.login_url(controller)  %>">
+        <button class="btn btn-success btn-block"> Login </button>
+      </a>
+    </div>
+
+    <div class="col-md-2">
+    </div >
+  </div>
+  <div class="clearfix"></div>
+</div>
+-->
+
+<div class="welcome-block">
+  <div class="col-md-6 welcome-logo text-center">
+    <img src="/sign-in.png">
+  </div>
+  <div class="col-md-5 btn-holders">
+    <div class="row">
+      <!--<a href="http://123.30.234.253:3000/users/sign_up?redirect_url=<%=u @return_path%>"> -->
+      <a href="<%= APP_CONFIG['portal_url'] %>/users/sign_up?redirect_url=<%=u @return_path%>">
+        <button class="btn btn-primary btn-block"><%= t('signup_btn') %> </button>
+      </a>
+    </div>
+    <div class="row text-center" style="">
+      <h4 style="font-size: 20px; text-transform: uppercase"><%= t('or') %></h4>
+    </div>
+    <div class="row">
+      <a href="<%= CASClient::Frameworks::Rails::Filter.login_url(controller)  %>">
+        <button class="btn btn-success btn-block"> <%= t('signin_btn') %> </button>
+      </a>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+

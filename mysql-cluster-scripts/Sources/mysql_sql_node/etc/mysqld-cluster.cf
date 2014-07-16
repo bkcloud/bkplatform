@@ -1,0 +1,5 @@
+[mysqld]
+ndbcluster
+ndb-cluster-connection-pool=1
+default_storage_engine=ndbcluster
+socket=/tmp/mysql.sock

@@ -1,0 +1,117 @@
+#!/bin/bash
+
+set -e
+
+#CHECK CONFIG FILE VALID
+if [ -z $1 ]; then 
+   echo "config file is unset"; 
+   exit 1;
+fi
+
+if [ ! -f $1 ]; then
+  echo "config file not found";
+  exit 1;
+fi
+
+CONFIGFILE=$1
+RESPONSE=/var/log/bksync-res.log
+last_list=/var/log/bksync-old-list.txt
+current_list=/tmp/bksync-current-list.txt
+
+# CHECK RESPONSE
+if [ ! -f $RESPONSE ]; then
+  echo "Run test first!";
+  exit 1;
+else
+  text=$(cat $RESPONSE)
+  rm -rf $RESPONSE
+fi
+
+#SSH
+eval `ssh-agent`
+ssh-add ~/.ssh/bkswift_id_rsa
+
+#READ CONFIG
+eval `sed '/^ *#/d;s/:/ /;' < "$CONFIGFILE" | while read key val
+do
+    #verify here
+    str="$key='$val'"
+    echo "$str"
+done`
+
+
+#VALIDATE CONFIGS
+if [ -z ${host+x} ]; then 
+   echo "host is unset"; 
+   exit 1;
+fi
+
+if [ -z ${path+x} ]; then 
+   echo "path is unset"; 
+   exit 1;
+fi
+
+if [ -z ${interval+x} ]; then 
+   echo "interval is unset"; 
+   exit 1;
+fi
+
+PWD= pwd
+#init file list
+rm -rf /tmp/bksync-created.txt
+rm -rf /tmp/bksync-deleted.txt
+touch /tmp/bksync-created.txt
+chmod +w /tmp/bksync-created.txt
+touch /tmp/bksync-deleted.txt
+chmod +w /tmp/bksync-deleted.txt
+if [ ! -f $last_list ];then
+  cd $path
+  find . -type f -follow -print > $last_list
+  cd -
+fi
+
+OWNER=$(stat -c "%U:%G" $path)
+
+#SYNC SERVER
+while true;do
+  #get current file list
+  cd $path
+  find . -type f -follow -print > $current_list
+  #cd -
+
+  #diff file lists
+  #created files
+  comm -13 <(sort $last_list) <(sort $current_list) > /tmp/bksync-created.txt
+  sed -i 's/\.\///g'  /tmp/bksync-created.txt
+  echo "CREATED!"
+  cat /tmp/bksync-created.txt
+
+  #deleted files
+  comm -23 <(sort $last_list) <(sort $current_list) > /tmp/bksync-deleted.txt
+  sed -i 's/\.\///g'  /tmp/bksync-deleted.txt
+  echo "DELETED!"
+  cat /tmp/bksync-deleted.txt
+
+  cat /tmp/bksync-created.txt /tmp/bksync-deleted.txt > /tmp/bksync-exclude.txt
+
+  #sync pull
+  #rsync -avzru --delete --exclude-from='/tmp/bksync-created.txt' --exclude-from='/tmp/bksync-deleted.txt' --exclude=".*"  "$host:$text/" "$path/"
+  rsync -avzru -e "ssh -i /home/$(whoami)/.ssh/bkswift_id_rsa" --delete --exclude-from='/tmp/bksync-created.txt' --exclude-from='/tmp/bksync-deleted.txt'  "bkstorage@$host:$text/" "$path/"
+
+  
+  #write old file list
+  cd $path
+  #while read file ; do rm -f "$file" ; done < /tmp/bksync-deleted.txt
+  find . -type f -follow -print > $last_list
+
+  # change permission
+  chown -R $OWNER $path
+  #chmod -R 775 $path
+
+  #sync push
+  rsync -avzru -e "ssh -i /home/$(whoami)/.ssh/bkswift_id_rsa" --delete "$path/" "bkstorage@$host:$text/"
+
+  #cd -
+  sleep $interval
+done
+

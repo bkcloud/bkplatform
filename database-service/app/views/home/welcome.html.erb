@@ -1,0 +1,19 @@
+<div id="welcome">
+  <div id="logo-wrapper">
+    <%= link_to '/' do %>
+      <%= image_tag 'logo-large.png' %>
+    <% end %>
+  </div>
+  <div style="text-align: center;">
+    <div class="getting-started">
+      <a href="<%= CASClient::Frameworks::Rails::Filter.login_url(controller)  %>">
+        <button type="button" class="btn btn-success btn-xlarge btn-block"><%= t('login') %>
+        </button>
+      </a>
+      <a href="<%= APP_CONFIG['portal_url'] %>/users/sign_up?redirect_url=<%=u @return_path%>">
+        <button type="button" class="btn btn-default btn-xlarge btn-block"><%= t('signup') %>
+        </button>
+      </a>
+    </div>
+  </div>
+</div>

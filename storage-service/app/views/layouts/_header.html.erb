@@ -1,0 +1,42 @@
+<header id="fixed-header">
+  <div class="locale-changer">
+    <span><%= t('Language') %>: </span>
+    <span><a href="/locale?locale=vi" data-remote="true"><img src="/img/vi.gif"></a></span>
+    <span><a href="/locale?locale=en" data-remote="true"><img src="/img/en.gif"></a></span>
+  </div>
+  <div>
+    <div class="logo-holder">
+      <div class="logo">
+        <a href="/">
+          <img src="/cloud-database.png"/>
+    <span> BK STORAGE </span>
+        </a>
+      </div>
+    </div>
+  <% if user_signed_in? %>
+    <ul class="top-nav">
+      <li class="nav-link">
+        <a href="/install">
+        <i class="glyphicon glyphicon-circle-arrow-down"></i>
+          <span>
+            <%= t('install_nav') %>
+          </span>
+        </a>
+      </li>
+      <li class="nav-link">
+        <span> ● </span>
+        <i class=""></i>
+      </li>
+      <li class="nav-link">
+        <%# <a href="/users/sign_out" data-method="delete"> %>
+          <a href="/logout">
+          <span>
+            <%= t('signout_nav') %>
+          </span>
+        </a>
+      </li>
+    </ul>
+  <% end %>
+  <div style="clear: both"></div>
+</div>
+</header>

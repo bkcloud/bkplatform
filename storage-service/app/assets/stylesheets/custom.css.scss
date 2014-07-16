@@ -1,0 +1,101 @@
+
+@import "twitter/bootstrap";
+@import 'bootstrap/glyphicons';
+
+
+header > ul.top-nav {
+  margin-top: 16px;
+}
+
+.download-pane {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: center;
+  h3 {
+    margin-top: 10px;
+  }
+  i.glyphicon {
+    font-size: 65px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .btn {
+    font-size: 26px;
+  }
+  .file-size {
+    color: #999;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+
+
+.install-box {
+  background: #fefeff;
+  border: 1px solid #c3c6ca;
+  padding: 10px 20px 20px 20px;
+  margin: 0 0 2em 0;
+  margin-top: 5em;
+  padding: 30px 20px 30px 30px;
+  position: relative;
+  margin-bottom: 1em;
+  .install-quote {
+    text-align: center;
+    .quote {
+      font-family: "Open Sans","lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+      font-size: 26px;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 20px;
+      span {
+        display: block;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: italic;
+        color: #666;
+        background: none;
+        text-align: center;
+        padding: 0px;
+        margin-top: 10px;
+      }
+    }
+  }
+  .install-link {
+    width: 80%;
+    margin: 0 auto;
+    button {
+      font-size: 30px;
+      margin-top: 60px;
+      height: 80px;
+    }
+  }
+}
+
+
+.highlight > pre > code > span {
+  line-height: 30px;
+}
+
+
+.welcome-block  {
+  .btn {
+    font-size: 28px;
+  }
+  margin-top: 100px;
+  .btn-holders {
+    margin-top: 60px;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+.welcome-logo {
+  h1 {
+    color: rgb(13,94,171);
+    font-weight: bold;
+    font-family: "Open Sans","lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+  }
+  height: 150px;
+}

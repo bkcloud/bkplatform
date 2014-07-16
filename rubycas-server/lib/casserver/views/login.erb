@@ -1,0 +1,25 @@
+<% INFO = {"mistake" => "danger","confirmation" => "success","notice" => "info"} %>
+<div class="verticalcenter">
+	<a href="login" tabindex="99" ><img src="<%= escape_html @uri_path %>/themes/logo-big.png" alt="Logo" class="brand" /></a>
+	<div class="panel panel-primary">
+		<div class="panel-body">
+      <h6 class="text-center" style="margin-bottom: 25px;">
+        <% if @message %>
+          <div class="messagebox <%= escape_html @message[:type] %> alert alert-dismissable alert-<%=escape_html INFO[@message[:type]]%>">
+            <%= escape_html @message[:message] %>
+          </div>
+        <% end %>
+      </h6>
+      <%= erb(:_login_form, :layout => false) %>
+		</div>
+		<div class="panel-footer">
+      <div class="pull-right">
+        <input type='reset' id="reset-btn" class="btn btn-default"/ onclick="document.forms[0].reset()">
+        <input type="submit" accesskey="l" tabindex="3" value="<%= t.button.login %>" id="login-submit-hidden" class="btn btn-primary" onclick="document.forms[0].submit()"/>
+      </div>
+		</div>
+  </div>
+</div>
+
+
+

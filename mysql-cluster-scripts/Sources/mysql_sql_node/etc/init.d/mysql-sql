@@ -1,0 +1,60 @@
+#! /bin/bash
+#
+# mysql-sql       Bring up/down sql node
+#
+# chkconfig: 2345 26 70
+# description: Activates/Deactivates sql node  \
+#              start at boot time.
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+cd /usr/local/mysql-cluster
+
+# See how we were called.
+case "$1" in
+    start)
+        echo "Starting SQL node"
+        ps cax | grep mysqld_safe > /dev/null
+        if [ $? -eq 0 ]; then
+          echo "SQL node is already running."
+        else
+          python /script/start_sql_node.py
+          rc=$?
+        fi
+        echo "Started"
+        ;;
+    stop)
+        echo "Stopping SQL node"
+        ps cax | grep mysqld_safe > /dev/null
+        if [ $? -eq 0 ]; then
+          cd /usr/local/mysql-cluster/ && bin/mysqladmin -uroot -p123456 shutdown
+          killall -9 mysqld
+          killall -9 mysqld_safe
+          rc=$?
+        else
+          echo "Notthing to stopped"
+        fi
+        echo "Stopped"
+        ;;
+  status)
+        ps cax | grep mysqld_safe > /dev/null
+        if [ $? -eq 0 ]; then
+          echo "SQL node is running."
+        else
+          echo "SQL node is not running."
+        fi
+        rc=$?
+        ;;
+  restart|reload|force-reload)
+        $0 stop
+        $0 start
+        rc=$?
+        ;;
+  *)
+        echo $"Usage: $0 {start|stop|status|restart|reload|force-reload}"
+        exit 2
+esac
+
+exit $rc

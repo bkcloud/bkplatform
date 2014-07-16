@@ -1,0 +1,54 @@
+#! /bin/bash
+#
+# mysql-data       Bring up/down data node
+#
+# chkconfig: 2345 26 70
+# description: Activates/Deactivates data node  \
+#              start at boot time.
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+cd /usr/local/mysql-cluster
+
+# See how we were called.
+case "$1" in
+  start)
+        echo "Starting data node"
+        ps cax | grep ndbmtd > /dev/null
+        if [ $? -eq 0 ]; then
+          echo "Data node is already running."
+        else
+          python /script/start_data_node.py
+          rc=$?
+          echo "Started"
+        fi
+        ;;
+  stop)
+        echo "Stopping data node"
+        killall -9 ndbmtd
+        rc=$?
+        echo "Stopped"
+        ;;
+  status)
+        ps cax | grep ndbmtd > /dev/null
+        if [ $? -eq 0 ]; then
+          echo "Data node is running."
+        else
+          echo "Data node is not running."
+        fi
+              rc=$?
+        ;;
+  restart|reload|force-reload)
+        $0 stop
+        sleep 2
+        $0 start
+        rc=$?
+        ;;
+  *)
+  echo $"Usage: $0 {start|stop|status|restart|reload|force-reload}"
+  exit 2
+esac
+
+exit $rc

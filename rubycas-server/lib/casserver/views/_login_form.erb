@@ -1,0 +1,27 @@
+<%# coding: UTF-8 -%>
+<form method="post" action="<%= @form_action || "login" %>" id="login-form"
+  onsubmit="submitbutton = document.getElementById('login-submit'); submitbutton.value='<%= t.notice.please_wait %>'; submitbutton.disabled=true; return true;"
+  class="form-horizontal" style="margin-bottom: 0px !important;"
+  >
+
+  <div class="form-group">
+    <div class="col-sm-12">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+        <input type="text" class="form-control" id="username" name="username" tabindex="1" placeholder="Username" accesskey="u">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-12">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+        <input type="password" class="form-control" id="password" name="password" tabindex="2" placeholder="Password" accesskey="p" autocomplete="off">
+      </div>
+    </div>
+  </div>
+  <input type="hidden" id="lt" name="lt" value="<%= escape_html @lt %>" />
+  <input type="hidden" id="service" name="service" value="<%= escape_html @service %>" />
+  <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
+</form>

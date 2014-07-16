@@ -1,0 +1,75 @@
+#!/bin/bash
+#
+# chkconfig: 35 90 12
+# description: Bksync server
+#
+# Get function from functions library
+. /etc/init.d/functions
+# Start the service FOO
+
+config='/etc/bksync.conf'
+bksync='/usr/local/bin/bksync'
+bksync_test='/usr/local/bin/bksync-test'
+lockfile='/var/lock/subsys/bksyncd/bksync'
+pidfile='/var/run/bksync.pid'
+logfile='/var/log/bksync.log'
+resfile='/var/log/bksync-res.log'
+prog='bksync'
+RETVAL=0
+
+start() {
+  if [ -f $lockfile ]; then
+    	echo -n "$prog server is running: "
+    	echo
+  else
+        #initlog -c "echo -n Starting loop server: "
+        #run test
+        $bksync_test  $config
+	RETVAL=$?
+	if [ $RETVAL = 1 ]; then
+	  echo -n "Starting bksync server: "
+	  failure $"bksync server startup"
+	  echo
+	  exit 1
+	fi
+	($bksync $config) >> $logfile 2>&1 &
+        ### Create the lock file ###
+        touch $lockfile
+	REVAL=$?
+	echo -n "Starting bksync server: "
+       	success $"bksync server startup"
+        echo
+        return $RETVAL
+  fi
+}
+# Restart the service loop
+stop() {
+        killproc bksync
+        ### Now, delete the lock file ###
+        #initlog -c "echo -n Stoping loop server: "
+	RETVAL=$?
+    	[ $RETVAL = 0 ] && rm -rf $lockfile
+	echo -n "Stopping bksync server: "
+        echo
+    	return $RETVAL
+}
+### main logic ###
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  status)
+        status bksync
+        ;;
+  restart|reload|condrestart)
+        stop
+        start
+        ;;
+  *)
+        echo $"Usage: $0 {start|stop|restart|reload|status}"
+        exit 1
+esac
+exit 0

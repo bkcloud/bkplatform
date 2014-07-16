@@ -1,0 +1,18 @@
+<div class="hero-unit">
+  <h1><em class="error">x</em><%= t('pages.unauthorized.title') %></h1>
+  <br/>
+  <p>
+    <%= t('pages.unauthorized.message').html_safe %>
+  </p>
+  <p>
+    <%= t('pages.unauthorized.explanation', path: File.expand_path("config/initializers/auth.rb")).html_safe %>
+  </p>
+  <a href="<%= root_url %>" class="btn">
+    <i class="icon-refresh"></i> 
+    <%= t('pages.error.try_again') %>
+  </a>
+  <br/>
+  <br/>
+  <%= render 'shared/help' %>
+</div>
+

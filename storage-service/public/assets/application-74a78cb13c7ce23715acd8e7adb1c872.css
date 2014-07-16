@@ -1,0 +1,4659 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+
+
+
+
+
+
+ */
+/* line 1, /home/bkstorage/elrails/app/assets/stylesheets/reset.sass */
+body {
+  background-color: white;
+}
+/* jQuery UI CSS Framework 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ */
+/* Layout helpers
+ *----------------------------------
+ */
+/* line 16, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-helper-hidden {
+  display: none;
+}
+
+/* line 19, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-helper-hidden-accessible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* line 24, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-helper-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  line-height: 1.3;
+  text-decoration: none;
+  font-size: 100%;
+  list-style: none;
+}
+
+/* line 34, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-helper-clearfix {
+  display: inline-block;
+}
+/* line 35, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-helper-clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* required comment for clearfix to work in Opera \
+ */
+/* line 46, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+* html .ui-helper-clearfix {
+  height: 1%;
+}
+
+/* line 49, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-helper-clearfix {
+  display: block;
+}
+
+/* end clearfix
+ */
+/* line 55, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-helper-zfix {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  filter: Alpha(Opacity=0);
+}
+
+/* Interaction Cues
+ *----------------------------------
+ */
+/* line 68, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-disabled {
+  cursor: default !important;
+}
+
+/* Icons
+ *----------------------------------
+ */
+/* states and images
+ */
+/* line 78, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon {
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+/* Misc visuals
+ *----------------------------------
+ */
+/* Overlays
+ */
+/* line 91, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-widget-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* jQuery UI CSS Framework 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ *
+ * To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Verdana,Arial,sans-serif&fwDefault=normal&fsDefault=1.1em&cornerRadius=4px&bgColorHeader=cccccc&bgTextureHeader=03_highlight_soft.png&bgImgOpacityHeader=75&borderColorHeader=aaaaaa&fcHeader=222222&iconColorHeader=222222&bgColorContent=ffffff&bgTextureContent=01_flat.png&bgImgOpacityContent=75&borderColorContent=aaaaaa&fcContent=222222&iconColorContent=222222&bgColorDefault=e6e6e6&bgTextureDefault=02_glass.png&bgImgOpacityDefault=75&borderColorDefault=d3d3d3&fcDefault=555555&iconColorDefault=888888&bgColorHover=dadada&bgTextureHover=02_glass.png&bgImgOpacityHover=75&borderColorHover=999999&fcHover=212121&iconColorHover=454545&bgColorActive=ffffff&bgTextureActive=02_glass.png&bgImgOpacityActive=65&borderColorActive=aaaaaa&fcActive=212121&iconColorActive=454545&bgColorHighlight=fbf9ee&bgTextureHighlight=02_glass.png&bgImgOpacityHighlight=55&borderColorHighlight=fcefa1&fcHighlight=363636&iconColorHighlight=2e83ff&bgColorError=fef1ec&bgTextureError=02_glass.png&bgImgOpacityError=95&borderColorError=cd0a0a&fcError=cd0a0a&iconColorError=cd0a0a&bgColorOverlay=aaaaaa&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=0&opacityOverlay=30&bgColorShadow=aaaaaa&bgTextureShadow=01_flat.png&bgImgOpacityShadow=0&opacityShadow=30&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=8px
+ */
+/* Component containers
+ *----------------------------------
+ */
+/* line 114, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-widget {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 1.1em;
+}
+/* line 117, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-widget .ui-widget {
+  font-size: 1em;
+}
+/* line 119, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 1em;
+}
+
+/* line 123, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-widget-content {
+  border: 1px solid #aaaaaa;
+  background: white url("ui/ui-bg_flat_75_ffffff_40x100.png") 50% 50% repeat-x;
+  color: #222222;
+}
+/* line 127, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-widget-content a {
+  color: #222222;
+}
+
+/* line 130, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-widget-header {
+  border: 1px solid #aaaaaa;
+  background: #cccccc url("ui/ui-bg_highlight-soft_75_cccccc_1x100.png") 50% 50% repeat-x;
+  color: #222222;
+  font-weight: bold;
+}
+/* line 135, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-widget-header a {
+  color: #222222;
+}
+
+/* Interaction states
+ *----------------------------------
+ */
+/* line 142, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  border: 1px solid lightgrey;
+  background: #e6e6e6 url("ui/ui-bg_glass_75_e6e6e6_1x400.png") 50% 50% repeat-x;
+  font-weight: normal;
+  color: #555555;
+}
+
+/* line 148, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-default a {
+  color: #555555;
+  text-decoration: none;
+}
+/* line 151, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-default a:link, .ui-state-default a:visited {
+  color: #555555;
+  text-decoration: none;
+}
+
+/* line 155, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+  border: 1px solid #999999;
+  background: #dadada url("ui/ui-bg_glass_75_dadada_1x400.png") 50% 50% repeat-x;
+  font-weight: normal;
+  color: #212121;
+}
+
+/* line 161, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-hover a {
+  color: #212121;
+  text-decoration: none;
+}
+/* line 164, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-hover a:hover {
+  color: #212121;
+  text-decoration: none;
+}
+
+/* line 168, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+  border: 1px solid #aaaaaa;
+  background: white url("ui/ui-bg_glass_65_ffffff_1x400.png") 50% 50% repeat-x;
+  font-weight: normal;
+  color: #212121;
+}
+
+/* line 174, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-active a {
+  color: #212121;
+  text-decoration: none;
+}
+/* line 177, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-active a:link, .ui-state-active a:visited {
+  color: #212121;
+  text-decoration: none;
+}
+
+/* line 181, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-widget :active {
+  outline: none;
+}
+
+/* Interaction Cues
+ *----------------------------------
+ */
+/* line 188, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+  border: 1px solid #fcefa1;
+  background: #fbf9ee url("ui/ui-bg_glass_55_fbf9ee_1x400.png") 50% 50% repeat-x;
+  color: #363636;
+}
+
+/* line 193, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-highlight a, .ui-widget-content .ui-state-highlight a, .ui-widget-header .ui-state-highlight a {
+  color: #363636;
+}
+
+/* line 196, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
+  border: 1px solid #cd0a0a;
+  background: #fef1ec url("ui/ui-bg_glass_95_fef1ec_1x400.png") 50% 50% repeat-x;
+  color: #cd0a0a;
+}
+
+/* line 201, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a, .ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text {
+  color: #cd0a0a;
+}
+
+/* line 204, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary {
+  font-weight: bold;
+}
+
+/* line 207, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-priority-secondary, .ui-widget-content .ui-priority-secondary, .ui-widget-header .ui-priority-secondary {
+  opacity: 0.7;
+  filter: Alpha(Opacity=70);
+  font-weight: normal;
+}
+
+/* line 212, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled {
+  opacity: 0.35;
+  filter: Alpha(Opacity=35);
+  background-image: none;
+}
+
+/* Icons
+ *----------------------------------
+ */
+/* states and images
+ */
+/* line 224, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon {
+  width: 16px;
+  height: 16px;
+  background-image: url("ui/ui-icons_222222_256x240.png");
+}
+
+/* line 229, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-widget-content .ui-icon, .ui-widget-header .ui-icon {
+  background-image: url("ui/ui-icons_222222_256x240.png");
+}
+
+/* line 232, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-default .ui-icon {
+  background-image: url("ui/ui-icons_888888_256x240.png");
+}
+
+/* line 235, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon, .ui-state-active .ui-icon {
+  background-image: url("ui/ui-icons_454545_256x240.png");
+}
+
+/* line 238, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-highlight .ui-icon {
+  background-image: url("ui/ui-icons_2e83ff_256x240.png");
+}
+
+/* line 241, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-state-error .ui-icon, .ui-state-error-text .ui-icon {
+  background-image: url("ui/ui-icons_cd0a0a_256x240.png");
+}
+
+/* positioning
+ */
+/* line 247, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-carat-1-n {
+  background-position: 0 0;
+}
+
+/* line 250, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-carat-1-ne {
+  background-position: -16px 0;
+}
+
+/* line 253, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-carat-1-e {
+  background-position: -32px 0;
+}
+
+/* line 256, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-carat-1-se {
+  background-position: -48px 0;
+}
+
+/* line 259, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-carat-1-s {
+  background-position: -64px 0;
+}
+
+/* line 262, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-carat-1-sw {
+  background-position: -80px 0;
+}
+
+/* line 265, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-carat-1-w {
+  background-position: -96px 0;
+}
+
+/* line 268, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-carat-1-nw {
+  background-position: -112px 0;
+}
+
+/* line 271, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-carat-2-n-s {
+  background-position: -128px 0;
+}
+
+/* line 274, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-carat-2-e-w {
+  background-position: -144px 0;
+}
+
+/* line 277, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-triangle-1-n {
+  background-position: 0 -16px;
+}
+
+/* line 280, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-triangle-1-ne {
+  background-position: -16px -16px;
+}
+
+/* line 283, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-triangle-1-e {
+  background-position: -32px -16px;
+}
+
+/* line 286, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-triangle-1-se {
+  background-position: -48px -16px;
+}
+
+/* line 289, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-triangle-1-s {
+  background-position: -64px -16px;
+}
+
+/* line 292, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-triangle-1-sw {
+  background-position: -80px -16px;
+}
+
+/* line 295, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-triangle-1-w {
+  background-position: -96px -16px;
+}
+
+/* line 298, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-triangle-1-nw {
+  background-position: -112px -16px;
+}
+
+/* line 301, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-triangle-2-n-s {
+  background-position: -128px -16px;
+}
+
+/* line 304, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-triangle-2-e-w {
+  background-position: -144px -16px;
+}
+
+/* line 307, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrow-1-n {
+  background-position: 0 -32px;
+}
+
+/* line 310, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrow-1-ne {
+  background-position: -16px -32px;
+}
+
+/* line 313, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrow-1-e {
+  background-position: -32px -32px;
+}
+
+/* line 316, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrow-1-se {
+  background-position: -48px -32px;
+}
+
+/* line 319, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrow-1-s {
+  background-position: -64px -32px;
+}
+
+/* line 322, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrow-1-sw {
+  background-position: -80px -32px;
+}
+
+/* line 325, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrow-1-w {
+  background-position: -96px -32px;
+}
+
+/* line 328, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrow-1-nw {
+  background-position: -112px -32px;
+}
+
+/* line 331, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrow-2-n-s {
+  background-position: -128px -32px;
+}
+
+/* line 334, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrow-2-ne-sw {
+  background-position: -144px -32px;
+}
+
+/* line 337, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrow-2-e-w {
+  background-position: -160px -32px;
+}
+
+/* line 340, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrow-2-se-nw {
+  background-position: -176px -32px;
+}
+
+/* line 343, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowstop-1-n {
+  background-position: -192px -32px;
+}
+
+/* line 346, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowstop-1-e {
+  background-position: -208px -32px;
+}
+
+/* line 349, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowstop-1-s {
+  background-position: -224px -32px;
+}
+
+/* line 352, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowstop-1-w {
+  background-position: -240px -32px;
+}
+
+/* line 355, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowthick-1-n {
+  background-position: 0 -48px;
+}
+
+/* line 358, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowthick-1-ne {
+  background-position: -16px -48px;
+}
+
+/* line 361, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowthick-1-e {
+  background-position: -32px -48px;
+}
+
+/* line 364, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowthick-1-se {
+  background-position: -48px -48px;
+}
+
+/* line 367, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowthick-1-s {
+  background-position: -64px -48px;
+}
+
+/* line 370, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowthick-1-sw {
+  background-position: -80px -48px;
+}
+
+/* line 373, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowthick-1-w {
+  background-position: -96px -48px;
+}
+
+/* line 376, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowthick-1-nw {
+  background-position: -112px -48px;
+}
+
+/* line 379, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowthick-2-n-s {
+  background-position: -128px -48px;
+}
+
+/* line 382, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowthick-2-ne-sw {
+  background-position: -144px -48px;
+}
+
+/* line 385, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowthick-2-e-w {
+  background-position: -160px -48px;
+}
+
+/* line 388, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowthick-2-se-nw {
+  background-position: -176px -48px;
+}
+
+/* line 391, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowthickstop-1-n {
+  background-position: -192px -48px;
+}
+
+/* line 394, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowthickstop-1-e {
+  background-position: -208px -48px;
+}
+
+/* line 397, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowthickstop-1-s {
+  background-position: -224px -48px;
+}
+
+/* line 400, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowthickstop-1-w {
+  background-position: -240px -48px;
+}
+
+/* line 403, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowreturnthick-1-w {
+  background-position: 0 -64px;
+}
+
+/* line 406, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowreturnthick-1-n {
+  background-position: -16px -64px;
+}
+
+/* line 409, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowreturnthick-1-e {
+  background-position: -32px -64px;
+}
+
+/* line 412, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowreturnthick-1-s {
+  background-position: -48px -64px;
+}
+
+/* line 415, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowreturn-1-w {
+  background-position: -64px -64px;
+}
+
+/* line 418, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowreturn-1-n {
+  background-position: -80px -64px;
+}
+
+/* line 421, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowreturn-1-e {
+  background-position: -96px -64px;
+}
+
+/* line 424, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowreturn-1-s {
+  background-position: -112px -64px;
+}
+
+/* line 427, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowrefresh-1-w {
+  background-position: -128px -64px;
+}
+
+/* line 430, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowrefresh-1-n {
+  background-position: -144px -64px;
+}
+
+/* line 433, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowrefresh-1-e {
+  background-position: -160px -64px;
+}
+
+/* line 436, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrowrefresh-1-s {
+  background-position: -176px -64px;
+}
+
+/* line 439, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrow-4 {
+  background-position: 0 -80px;
+}
+
+/* line 442, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-arrow-4-diag {
+  background-position: -16px -80px;
+}
+
+/* line 445, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-extlink {
+  background-position: -32px -80px;
+}
+
+/* line 448, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-newwin {
+  background-position: -48px -80px;
+}
+
+/* line 451, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-refresh {
+  background-position: -64px -80px;
+}
+
+/* line 454, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-shuffle {
+  background-position: -80px -80px;
+}
+
+/* line 457, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-transfer-e-w {
+  background-position: -96px -80px;
+}
+
+/* line 460, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-transferthick-e-w {
+  background-position: -112px -80px;
+}
+
+/* line 463, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-folder-collapsed {
+  background-position: 0 -96px;
+}
+
+/* line 466, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-folder-open {
+  background-position: -16px -96px;
+}
+
+/* line 469, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-document {
+  background-position: -32px -96px;
+}
+
+/* line 472, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-document-b {
+  background-position: -48px -96px;
+}
+
+/* line 475, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-note {
+  background-position: -64px -96px;
+}
+
+/* line 478, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-mail-closed {
+  background-position: -80px -96px;
+}
+
+/* line 481, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-mail-open {
+  background-position: -96px -96px;
+}
+
+/* line 484, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-suitcase {
+  background-position: -112px -96px;
+}
+
+/* line 487, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-comment {
+  background-position: -128px -96px;
+}
+
+/* line 490, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-person {
+  background-position: -144px -96px;
+}
+
+/* line 493, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-print {
+  background-position: -160px -96px;
+}
+
+/* line 496, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-trash {
+  background-position: -176px -96px;
+}
+
+/* line 499, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-locked {
+  background-position: -192px -96px;
+}
+
+/* line 502, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-unlocked {
+  background-position: -208px -96px;
+}
+
+/* line 505, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-bookmark {
+  background-position: -224px -96px;
+}
+
+/* line 508, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-tag {
+  background-position: -240px -96px;
+}
+
+/* line 511, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-home {
+  background-position: 0 -112px;
+}
+
+/* line 514, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-flag {
+  background-position: -16px -112px;
+}
+
+/* line 517, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-calendar {
+  background-position: -32px -112px;
+}
+
+/* line 520, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-cart {
+  background-position: -48px -112px;
+}
+
+/* line 523, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-pencil {
+  background-position: -64px -112px;
+}
+
+/* line 526, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-clock {
+  background-position: -80px -112px;
+}
+
+/* line 529, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-disk {
+  background-position: -96px -112px;
+}
+
+/* line 532, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-calculator {
+  background-position: -112px -112px;
+}
+
+/* line 535, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-zoomin {
+  background-position: -128px -112px;
+}
+
+/* line 538, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-zoomout {
+  background-position: -144px -112px;
+}
+
+/* line 541, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-search {
+  background-position: -160px -112px;
+}
+
+/* line 544, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-wrench {
+  background-position: -176px -112px;
+}
+
+/* line 547, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-gear {
+  background-position: -192px -112px;
+}
+
+/* line 550, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-heart {
+  background-position: -208px -112px;
+}
+
+/* line 553, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-star {
+  background-position: -224px -112px;
+}
+
+/* line 556, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-link {
+  background-position: -240px -112px;
+}
+
+/* line 559, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-cancel {
+  background-position: 0 -128px;
+}
+
+/* line 562, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-plus {
+  background-position: -16px -128px;
+}
+
+/* line 565, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-plusthick {
+  background-position: -32px -128px;
+}
+
+/* line 568, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-minus {
+  background-position: -48px -128px;
+}
+
+/* line 571, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-minusthick {
+  background-position: -64px -128px;
+}
+
+/* line 574, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-close {
+  background-position: -80px -128px;
+}
+
+/* line 577, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-closethick {
+  background-position: -96px -128px;
+}
+
+/* line 580, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-key {
+  background-position: -112px -128px;
+}
+
+/* line 583, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-lightbulb {
+  background-position: -128px -128px;
+}
+
+/* line 586, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-scissors {
+  background-position: -144px -128px;
+}
+
+/* line 589, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-clipboard {
+  background-position: -160px -128px;
+}
+
+/* line 592, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-copy {
+  background-position: -176px -128px;
+}
+
+/* line 595, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-contact {
+  background-position: -192px -128px;
+}
+
+/* line 598, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-image {
+  background-position: -208px -128px;
+}
+
+/* line 601, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-video {
+  background-position: -224px -128px;
+}
+
+/* line 604, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-script {
+  background-position: -240px -128px;
+}
+
+/* line 607, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-alert {
+  background-position: 0 -144px;
+}
+
+/* line 610, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-info {
+  background-position: -16px -144px;
+}
+
+/* line 613, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-notice {
+  background-position: -32px -144px;
+}
+
+/* line 616, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-help {
+  background-position: -48px -144px;
+}
+
+/* line 619, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-check {
+  background-position: -64px -144px;
+}
+
+/* line 622, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-bullet {
+  background-position: -80px -144px;
+}
+
+/* line 625, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-radio-off {
+  background-position: -96px -144px;
+}
+
+/* line 628, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-radio-on {
+  background-position: -112px -144px;
+}
+
+/* line 631, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-pin-w {
+  background-position: -128px -144px;
+}
+
+/* line 634, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-pin-s {
+  background-position: -144px -144px;
+}
+
+/* line 637, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-play {
+  background-position: 0 -160px;
+}
+
+/* line 640, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-pause {
+  background-position: -16px -160px;
+}
+
+/* line 643, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-seek-next {
+  background-position: -32px -160px;
+}
+
+/* line 646, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-seek-prev {
+  background-position: -48px -160px;
+}
+
+/* line 649, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-seek-end {
+  background-position: -64px -160px;
+}
+
+/* line 652, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-seek-start, .ui-icon-seek-first {
+  background-position: -80px -160px;
+}
+
+/* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead
+ */
+/* line 658, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-stop {
+  background-position: -96px -160px;
+}
+
+/* line 661, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-eject {
+  background-position: -112px -160px;
+}
+
+/* line 664, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-volume-off {
+  background-position: -128px -160px;
+}
+
+/* line 667, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-volume-on {
+  background-position: -144px -160px;
+}
+
+/* line 670, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-power {
+  background-position: 0 -176px;
+}
+
+/* line 673, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-signal-diag {
+  background-position: -16px -176px;
+}
+
+/* line 676, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-signal {
+  background-position: -32px -176px;
+}
+
+/* line 679, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-battery-0 {
+  background-position: -48px -176px;
+}
+
+/* line 682, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-battery-1 {
+  background-position: -64px -176px;
+}
+
+/* line 685, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-battery-2 {
+  background-position: -80px -176px;
+}
+
+/* line 688, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-battery-3 {
+  background-position: -96px -176px;
+}
+
+/* line 691, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-circle-plus {
+  background-position: 0 -192px;
+}
+
+/* line 694, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-circle-minus {
+  background-position: -16px -192px;
+}
+
+/* line 697, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-circle-close {
+  background-position: -32px -192px;
+}
+
+/* line 700, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-circle-triangle-e {
+  background-position: -48px -192px;
+}
+
+/* line 703, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-circle-triangle-s {
+  background-position: -64px -192px;
+}
+
+/* line 706, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-circle-triangle-w {
+  background-position: -80px -192px;
+}
+
+/* line 709, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-circle-triangle-n {
+  background-position: -96px -192px;
+}
+
+/* line 712, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-circle-arrow-e {
+  background-position: -112px -192px;
+}
+
+/* line 715, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-circle-arrow-s {
+  background-position: -128px -192px;
+}
+
+/* line 718, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-circle-arrow-w {
+  background-position: -144px -192px;
+}
+
+/* line 721, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-circle-arrow-n {
+  background-position: -160px -192px;
+}
+
+/* line 724, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-circle-zoomin {
+  background-position: -176px -192px;
+}
+
+/* line 727, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-circle-zoomout {
+  background-position: -192px -192px;
+}
+
+/* line 730, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-circle-check {
+  background-position: -208px -192px;
+}
+
+/* line 733, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-circlesmall-plus {
+  background-position: 0 -208px;
+}
+
+/* line 736, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-circlesmall-minus {
+  background-position: -16px -208px;
+}
+
+/* line 739, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-circlesmall-close {
+  background-position: -32px -208px;
+}
+
+/* line 742, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-squaresmall-plus {
+  background-position: -48px -208px;
+}
+
+/* line 745, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-squaresmall-minus {
+  background-position: -64px -208px;
+}
+
+/* line 748, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-squaresmall-close {
+  background-position: -80px -208px;
+}
+
+/* line 751, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-grip-dotted-vertical {
+  background-position: 0 -224px;
+}
+
+/* line 754, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-grip-dotted-horizontal {
+  background-position: -16px -224px;
+}
+
+/* line 757, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-grip-solid-vertical {
+  background-position: -32px -224px;
+}
+
+/* line 760, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-grip-solid-horizontal {
+  background-position: -48px -224px;
+}
+
+/* line 763, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-gripsmall-diagonal-se {
+  background-position: -64px -224px;
+}
+
+/* line 766, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-icon-grip-diagonal-se {
+  background-position: -80px -224px;
+}
+
+/* Misc visuals
+ *----------------------------------
+ */
+/* Corner radius
+ */
+/* line 776, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -khtml-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+/* line 782, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -khtml-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* line 788, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -khtml-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/* line 794, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -khtml-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* Overlays
+ */
+/* line 803, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-widget-overlay {
+  background: #aaaaaa url("ui/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
+  opacity: 0.3;
+  filter: Alpha(Opacity=30);
+}
+
+/* line 808, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-widget-shadow {
+  margin: -8px 0 0 -8px;
+  padding: 8px;
+  background: #aaaaaa url("ui/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
+  opacity: 0.3;
+  filter: Alpha(Opacity=30);
+  -moz-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* * jQuery UI Resizable 1.8.16
+ * *
+ * * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * * Dual licensed under the MIT or GPL Version 2 licenses.
+ * * http://jquery.org/license
+ * *
+ * * http://docs.jquery.com/UI/Resizable#theming
+ */
+/* line 829, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-resizable {
+  position: relative;
+}
+
+/* line 832, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-resizable-handle {
+  position: absolute;
+  font-size: 0.1px;
+  z-index: 99999;
+  display: block;
+}
+
+/* line 838, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle {
+  display: none;
+}
+
+/* line 841, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-resizable-n {
+  cursor: n-resize;
+  height: 7px;
+  width: 100%;
+  top: -5px;
+  left: 0;
+}
+
+/* line 848, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-resizable-s {
+  cursor: s-resize;
+  height: 7px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+}
+
+/* line 855, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-resizable-e {
+  cursor: e-resize;
+  width: 7px;
+  right: -5px;
+  top: 0;
+  height: 100%;
+}
+
+/* line 862, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-resizable-w {
+  cursor: w-resize;
+  width: 7px;
+  left: -5px;
+  top: 0;
+  height: 100%;
+}
+
+/* line 869, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-resizable-se {
+  cursor: se-resize;
+  width: 12px;
+  height: 12px;
+  right: 1px;
+  bottom: 1px;
+}
+
+/* line 876, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-resizable-sw {
+  cursor: sw-resize;
+  width: 9px;
+  height: 9px;
+  left: -5px;
+  bottom: -5px;
+}
+
+/* line 883, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-resizable-nw {
+  cursor: nw-resize;
+  width: 9px;
+  height: 9px;
+  left: -5px;
+  top: -5px;
+}
+
+/* line 890, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-resizable-ne {
+  cursor: ne-resize;
+  width: 9px;
+  height: 9px;
+  right: -5px;
+  top: -5px;
+}
+
+/* * jQuery UI Selectable 1.8.16
+ * *
+ * * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * * Dual licensed under the MIT or GPL Version 2 licenses.
+ * * http://jquery.org/license
+ * *
+ * * http://docs.jquery.com/UI/Selectable#theming
+ */
+/* line 907, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-selectable-helper {
+  position: absolute;
+  z-index: 100;
+  border: 1px dotted black;
+}
+
+/* jQuery UI Accordion 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Accordion#theming
+ */
+/* IE/Win - Fix animation bug - #4615
+ */
+/* line 924, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-accordion {
+  width: 100%;
+}
+/* line 926, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-accordion .ui-accordion-header {
+  cursor: pointer;
+  position: relative;
+  margin-top: 1px;
+  zoom: 1;
+}
+/* line 931, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-accordion .ui-accordion-li-fix {
+  display: inline;
+}
+/* line 933, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-accordion .ui-accordion-header-active {
+  border-bottom: 0 !important;
+}
+/* line 935, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-accordion .ui-accordion-header a {
+  display: block;
+  font-size: 1em;
+  padding: 0.5em 0.5em 0.5em 0.7em;
+}
+
+/* line 940, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-accordion-icons .ui-accordion-header a {
+  padding-left: 2.2em;
+}
+
+/* line 944, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-accordion .ui-accordion-header .ui-icon {
+  position: absolute;
+  left: 0.5em;
+  top: 50%;
+  margin-top: -8px;
+}
+/* line 949, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-accordion .ui-accordion-content {
+  padding: 1em 2.2em;
+  border-top: 0;
+  margin-top: -2px;
+  position: relative;
+  top: 1px;
+  margin-bottom: 2px;
+  overflow: auto;
+  display: none;
+  zoom: 1;
+}
+/* line 959, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-accordion .ui-accordion-content-active {
+  display: block;
+}
+
+/* jQuery UI Autocomplete 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Autocomplete#theming
+ */
+/* line 972, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-autocomplete {
+  position: absolute;
+  cursor: default;
+}
+
+/* workarounds
+ */
+/* line 979, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+* html .ui-autocomplete {
+  width: 1px;
+}
+
+/* without this, the menu expands to 100% in IE6
+ */
+/* jQuery UI Menu 1.8.16
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Menu#theming
+ */
+/* line 995, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-menu {
+  list-style: none;
+  padding: 2px;
+  margin: 0;
+  display: block;
+  float: left;
+}
+/* line 1001, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-menu .ui-menu {
+  margin-top: -3px;
+}
+/* line 1003, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-menu .ui-menu-item {
+  margin: 0;
+  padding: 0;
+  zoom: 1;
+  float: left;
+  clear: left;
+  width: 100%;
+}
+/* line 1010, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-menu .ui-menu-item a {
+  text-decoration: none;
+  display: block;
+  padding: 0.2em 0.4em;
+  line-height: 1.5;
+  zoom: 1;
+}
+/* line 1016, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-menu .ui-menu-item a.ui-state-hover, .ui-menu .ui-menu-item a.ui-state-active {
+  font-weight: normal;
+  margin: -1px;
+}
+
+/* jQuery UI Button 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Button#theming
+ */
+/* line 1030, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-button {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  margin-right: 0.1em;
+  text-decoration: none !important;
+  cursor: pointer;
+  text-align: center;
+  zoom: 1;
+  overflow: visible;
+}
+
+/* the overflow property removes extra width in IE
+ */
+/* line 1044, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-button-icon-only {
+  width: 2.2em;
+}
+
+/* to make room for the icon, a width needs to be set here
+ */
+/* line 1050, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+button.ui-button-icon-only {
+  width: 2.4em;
+}
+
+/* button elements seem to need a little more width
+ */
+/* line 1056, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-button-icons-only {
+  width: 3.4em;
+}
+
+/* line 1059, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+button.ui-button-icons-only {
+  width: 3.7em;
+}
+
+/*button text element
+ */
+/* line 1065, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-button .ui-button-text {
+  display: block;
+  line-height: 1.4;
+}
+
+/* line 1069, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-button-text-only .ui-button-text {
+  padding: 0.4em 1em;
+}
+
+/* line 1072, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-button-icon-only .ui-button-text, .ui-button-icons-only .ui-button-text {
+  padding: 0.4em;
+  text-indent: -9999999px;
+}
+
+/* line 1076, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-button-text-icon-primary .ui-button-text, .ui-button-text-icons .ui-button-text {
+  padding: 0.4em 1em 0.4em 2.1em;
+}
+
+/* line 1079, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-button-text-icon-secondary .ui-button-text {
+  padding: 0.4em 2.1em 0.4em 1em;
+}
+
+/* line 1082, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-button-text-icons .ui-button-text {
+  padding: 0.4em 2.1em 0.4em 1em;
+  padding-left: 2.1em;
+  padding-right: 2.1em;
+}
+
+/* no icon support for input elements, provide padding by default
+ */
+/* line 1090, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+input.ui-button {
+  padding: 0.4em 1em;
+}
+
+/*button icon element(s)
+ */
+/* line 1096, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-button-icon-only .ui-icon, .ui-button-text-icon-primary .ui-icon, .ui-button-text-icon-secondary .ui-icon, .ui-button-text-icons .ui-icon, .ui-button-icons-only .ui-icon {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+}
+
+/* line 1101, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-button-icon-only .ui-icon {
+  left: 50%;
+  margin-left: -8px;
+}
+
+/* line 1105, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-button-text-icon-primary .ui-button-icon-primary, .ui-button-text-icons .ui-button-icon-primary, .ui-button-icons-only .ui-button-icon-primary {
+  left: 0.5em;
+}
+
+/* line 1108, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-button-text-icon-secondary .ui-button-icon-secondary, .ui-button-text-icons .ui-button-icon-secondary, .ui-button-icons-only .ui-button-icon-secondary, .ui-button-text-icons .ui-button-icon-secondary, .ui-button-icons-only .ui-button-icon-secondary {
+  right: 0.5em;
+}
+
+/*button sets
+ */
+/* line 1114, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-buttonset {
+  margin-right: 7px;
+}
+/* line 1116, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-buttonset .ui-button {
+  margin-left: 0;
+  margin-right: -0.3em;
+}
+
+/* workarounds
+ */
+/* line 1123, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+button.ui-button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* reset extra padding in Firefox */
+/* jQuery UI Dialog 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Dialog#theming
+ */
+/* line 1138, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-dialog {
+  position: absolute;
+  padding: 0.2em;
+  width: 300px;
+  overflow: hidden;
+}
+/* line 1143, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-dialog .ui-dialog-titlebar {
+  padding: 0.4em 1em;
+  position: relative;
+}
+/* line 1146, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-dialog .ui-dialog-title {
+  float: left;
+  margin: 0.1em 16px 0.1em 0;
+}
+/* line 1149, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-dialog .ui-dialog-titlebar-close {
+  position: absolute;
+  right: 0.3em;
+  top: 50%;
+  width: 19px;
+  margin: -10px 0 0 0;
+  padding: 1px;
+  height: 18px;
+}
+/* line 1157, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-dialog .ui-dialog-titlebar-close span {
+  display: block;
+  margin: 1px;
+}
+/* line 1160, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus {
+  padding: 0;
+}
+/* line 1162, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-dialog .ui-dialog-content {
+  position: relative;
+  border: 0;
+  padding: 0.5em 1em;
+  background: none;
+  overflow: auto;
+  zoom: 1;
+}
+/* line 1169, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-dialog .ui-dialog-buttonpane {
+  text-align: left;
+  border-width: 1px 0 0 0;
+  background-image: none;
+  margin: 0.5em 0 0 0;
+  padding: 0.3em 1em 0.5em 0.4em;
+}
+/* line 1175, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+  float: right;
+}
+/* line 1177, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-dialog .ui-dialog-buttonpane button {
+  margin: 0.5em 0.4em 0.5em 0;
+  cursor: pointer;
+}
+/* line 1180, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-dialog .ui-resizable-se {
+  width: 14px;
+  height: 14px;
+  right: 3px;
+  bottom: 3px;
+}
+
+/* line 1186, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-draggable .ui-dialog-titlebar {
+  cursor: move;
+}
+
+/* jQuery UI Slider 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Slider#theming
+ */
+/* line 1199, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-slider {
+  position: relative;
+  text-align: left;
+}
+/* line 1202, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 1.2em;
+  height: 1.2em;
+  cursor: default;
+}
+/* line 1208, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  font-size: 0.7em;
+  display: block;
+  border: 0;
+  background-position: 0 0;
+}
+
+/* line 1216, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-slider-horizontal {
+  height: 0.8em;
+}
+/* line 1218, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-slider-horizontal .ui-slider-handle {
+  top: -0.3em;
+  margin-left: -0.6em;
+}
+/* line 1221, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 100%;
+}
+/* line 1224, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-slider-horizontal .ui-slider-range-min {
+  left: 0;
+}
+/* line 1226, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-slider-horizontal .ui-slider-range-max {
+  right: 0;
+}
+
+/* line 1229, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-slider-vertical {
+  width: 0.8em;
+  height: 100px;
+}
+/* line 1232, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-slider-vertical .ui-slider-handle {
+  left: -0.3em;
+  margin-left: 0;
+  margin-bottom: -0.6em;
+}
+/* line 1236, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-slider-vertical .ui-slider-range {
+  left: 0;
+  width: 100%;
+}
+/* line 1239, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-slider-vertical .ui-slider-range-min {
+  bottom: 0;
+}
+/* line 1241, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-slider-vertical .ui-slider-range-max {
+  top: 0;
+}
+
+/* * jQuery UI Tabs 1.8.16
+ * *
+ * * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * * Dual licensed under the MIT or GPL Version 2 licenses.
+ * * http://jquery.org/license
+ * *
+ * * http://docs.jquery.com/UI/Tabs#theming
+ */
+/* line 1254, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-tabs {
+  position: relative;
+  padding: 0.2em;
+  zoom: 1;
+}
+/* line 1258, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-tabs .ui-tabs-nav {
+  margin: 0;
+  padding: 0.2em 0.2em 0;
+}
+/* line 1261, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-tabs .ui-tabs-nav li {
+  list-style: none;
+  float: left;
+  position: relative;
+  top: 1px;
+  margin: 0 0.2em 1px 0;
+  border-bottom: 0 !important;
+  padding: 0;
+  white-space: nowrap;
+}
+/* line 1270, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-tabs .ui-tabs-nav li a {
+  float: left;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+/* line 1274, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+  margin-bottom: 0;
+  padding-bottom: 1px;
+}
+/* line 1277, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+  cursor: text;
+}
+/* line 1279, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {
+  cursor: text;
+}
+/* line 1281, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-tabs .ui-tabs-nav li a {
+  cursor: pointer;
+}
+/* line 1283, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+  cursor: pointer;
+}
+/* line 1285, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-tabs .ui-tabs-panel {
+  display: block;
+  border-width: 0;
+  padding: 1em 1.4em;
+  background: none;
+}
+/* line 1290, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-tabs .ui-tabs-hide {
+  display: none !important;
+}
+
+/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed")
+ */
+/* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere...
+ */
+/* jQuery UI Datepicker 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Datepicker#theming
+ */
+/* line 1309, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker {
+  width: 17em;
+  padding: 0.2em 0.2em 0;
+  display: none;
+}
+/* line 1313, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker .ui-datepicker-header {
+  position: relative;
+  padding: 0.2em 0;
+}
+/* line 1316, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+  position: absolute;
+  top: 2px;
+  width: 1.8em;
+  height: 1.8em;
+}
+/* line 1321, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover {
+  top: 1px;
+}
+/* line 1323, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker .ui-datepicker-prev {
+  left: 2px;
+}
+/* line 1325, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker .ui-datepicker-next {
+  right: 2px;
+}
+/* line 1327, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker .ui-datepicker-prev-hover {
+  left: 1px;
+}
+/* line 1329, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker .ui-datepicker-next-hover {
+  right: 1px;
+}
+/* line 1331, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -8px;
+  top: 50%;
+  margin-top: -8px;
+}
+/* line 1338, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker .ui-datepicker-title {
+  margin: 0 2.3em;
+  line-height: 1.8em;
+  text-align: center;
+}
+/* line 1342, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker .ui-datepicker-title select {
+  font-size: 1em;
+  margin: 1px 0;
+}
+/* line 1346, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker select.ui-datepicker-month-year {
+  width: 100%;
+}
+/* line 1348, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+  width: 49%;
+}
+/* line 1350, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker table {
+  width: 100%;
+  font-size: 0.9em;
+  border-collapse: collapse;
+  margin: 0 0 0.4em;
+}
+/* line 1355, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker th {
+  padding: 0.7em 0.3em;
+  text-align: center;
+  font-weight: bold;
+  border: 0;
+}
+/* line 1360, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker td {
+  border: 0;
+  padding: 1px;
+}
+/* line 1363, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker td span, .ui-datepicker td a {
+  display: block;
+  padding: 0.2em;
+  text-align: right;
+  text-decoration: none;
+}
+/* line 1368, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker .ui-datepicker-buttonpane {
+  background-image: none;
+  margin: 0.7em 0 0 0;
+  padding: 0 0.2em;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+/* line 1375, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker .ui-datepicker-buttonpane button {
+  float: right;
+  margin: 0.5em 0.2em 0.4em;
+  cursor: pointer;
+  padding: 0.2em 0.6em 0.3em 0.6em;
+  width: auto;
+  overflow: visible;
+}
+/* line 1382, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+  float: left;
+}
+/* line 1384, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker.ui-datepicker-multi {
+  width: auto;
+}
+
+/* with multiple calendars
+ */
+/* line 1390, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-multi .ui-datepicker-group {
+  float: left;
+}
+/* line 1392, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-multi .ui-datepicker-group table {
+  width: 95%;
+  margin: 0 auto 0.4em;
+}
+
+/* line 1396, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-multi-2 .ui-datepicker-group {
+  width: 50%;
+}
+
+/* line 1399, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-multi-3 .ui-datepicker-group {
+  width: 33.3%;
+}
+
+/* line 1402, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-multi-4 .ui-datepicker-group {
+  width: 25%;
+}
+
+/* line 1406, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header, .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+  border-left-width: 0;
+}
+/* line 1408, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+  clear: left;
+}
+
+/* line 1411, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-row-break {
+  clear: both;
+  width: 100%;
+  font-size: 0em;
+}
+
+/* RTL support
+ */
+/* line 1419, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-rtl {
+  direction: rtl;
+}
+/* line 1421, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-rtl .ui-datepicker-prev {
+  right: 2px;
+  left: auto;
+}
+/* line 1424, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-rtl .ui-datepicker-next {
+  left: 2px;
+  right: auto;
+}
+/* line 1427, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+  right: 1px;
+  left: auto;
+}
+/* line 1430, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+  left: 1px;
+  right: auto;
+}
+/* line 1433, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+  clear: right;
+}
+/* line 1435, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+  float: left;
+}
+/* line 1437, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current {
+  float: right;
+}
+/* line 1439, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-rtl .ui-datepicker-group {
+  float: right;
+}
+/* line 1441, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header, .ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+  border-right-width: 0;
+  border-left-width: 1px;
+}
+
+/* IE6 IFRAME FIX (taken from datepicker 1.5.3
+ */
+/* line 1448, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-datepicker-cover {
+  display: none;
+  /*sorry for IE5 */
+  display/**/: block;
+  /*sorry for IE5 */
+  position: absolute;
+  /*must have */
+  z-index: -1;
+  /*must have */
+  filter: mask();
+  /*must have */
+  top: -4px;
+  /*must have */
+  left: -4px;
+  /*must have */
+  width: 200px;
+  /*must have */
+  height: 200px;
+  /*must have */
+}
+
+/** jQuery UI Progressbar 1.8.16
+ **
+ ** Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ ** Dual licensed under the MIT or GPL Version 2 licenses.
+ ** http://jquery.org/license
+ **
+ ** http://docs.jquery.com/UI/Progressbar#theming
+ */
+/* line 1478, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-progressbar {
+  height: 2em;
+  text-align: left;
+}
+/* line 1481, /home/bkstorage/elrails/app/assets/stylesheets/jquery-ui.sass */
+.ui-progressbar .ui-progressbar-value {
+  margin: -1px;
+  height: 100%;
+}
+/*!
+ * elFinder - file manager for web
+ * Version 2.0 rc1 (2011-11-27)
+ * http://elfinder.org
+ * 
+ * Copyright 2009-2011, Studio 42
+ * Licensed under a 3 clauses BSD license
+ */
+
+/* File: /home/troex/Sites/git/elfinder-2.x/css/commands.css */
+/******************************************************************/
+/*                          COMMANDS STYLES                       */
+/******************************************************************/
+
+/********************** COMMAND "RESIZE" ****************************/
+
+
+.elfinder-resize-control { padding-top:1em; }
+
+.elfinder-resize-control input[type=text] { border:1px solid #aaa; }
+
+
+.elfinder-resize-preview {
+	width:400px;
+	height:400px;
+	padding:10px;
+	background:#fff;
+	border:1px solid #aaa;
+	float:right;
+	position:relative;
+	overflow:auto;
+/*	z-index:100;*/
+}
+
+.elfinder-resize-handle { position:relative;}
+
+.elfinder-resize-handle-hline,
+.elfinder-resize-handle-vline {
+	position:absolute;
+	background-image:url("elfinder/crop.gif");
+}
+
+.elfinder-resize-handle-hline {
+	width:100%;
+	height:1px !important;
+	background-repeat:repeat-x;
+}
+.elfinder-resize-handle-vline {
+	width:1px !important;
+	height:100%;
+	background-repeat:repeat-y;
+}
+
+.elfinder-resize-handle-hline-top    { top:0; left:0; }
+.elfinder-resize-handle-hline-bottom { bottom:0; left:0; }
+.elfinder-resize-handle-vline-left   { top:0; left:0; }
+.elfinder-resize-handle-vline-right  { top:0; right:0; }
+
+
+
+.elfinder-resize-handle-point {
+	position:absolute;
+	width:8px;
+	height:8px;
+	border:1px solid #777;
+	background:transparent;
+}
+
+.elfinder-resize-handle-point-n {
+	
+}
+
+.elfinder-resize-handle-point-ne {
+	
+}
+
+.elfinder-resize-handle-point-e {
+	top:50%;
+	right:0;
+	margin-top:-5px;
+	margin-right:-5px;
+}
+
+.elfinder-resize-handle-point-se {
+	bottom:0;
+	right:0;
+	margin-bottom:-5px;
+	margin-right:-5px;
+}
+
+.elfinder-resize-handle-point-s {
+	bottom:0;
+	left:50%;
+	margin-bottom:-5px;
+	margin-left:-5px;
+}
+
+.elfinder-resize-handle-point-sw {
+	
+}
+
+.elfinder-resize-handle-point-w {
+	
+}
+
+.elfinder-resize-handle-point-nw {
+	
+}
+
+
+
+.elfinder-resize-spinner {
+	position:absolute;
+	width:200px;
+	height:30px;
+	top:50%;
+	margin-top:-25px;
+	left:50%;
+	margin-left:-100px;
+	text-align:center;
+	background:url(elfinder/progress.gif) center bottom repeat-x;
+}
+
+.elfinder-resize-row { margin-bottom:7px; position:relative;}
+
+.elfinder-resize-label { float:left; width:80px;}
+
+.elfinder-resize-reset {
+	width:16px;
+	height:16px;
+/*	border:1px solid #111;*/
+	position:absolute;
+	margin-top:-8px;
+}
+
+.elfinder-dialog-resize .ui-resizable-e { height:100%; width:10px;  } 
+.elfinder-dialog-resize .ui-resizable-s { width:100%; height:10px;}
+.elfinder-dialog-resize .ui-resizable-se { 
+	background:transparent; 
+	bottom:0; 
+	right:0; 
+	margin-right:-7px;
+	margin-bottom:-7px;
+}
+
+.elfinder-dialog-resize  .ui-icon-grip-solid-vertical {
+	position:absolute;
+	top:50%;
+	right:0;
+	margin-top:-8px;
+	margin-right:-11px;
+}
+.elfinder-dialog-resize .ui-icon-grip-solid-horizontal {
+	position:absolute;
+	left:50%;
+	bottom:0;
+	margin-left:-8px;
+	margin-bottom:-11px;;
+}
+
+/********************** COMMAND "EDIT" ****************************/
+/* edit text file textarea */
+.elfinder-file-edit {
+	width:99%;
+	height:99%;
+	margin:0;
+	padding:2px;
+	border:1px solid #ccc;
+}
+
+
+/********************** COMMAND "HELP" ****************************/
+/* help dialog */
+.elfinder-help { margin-bottom:.5em; }
+
+/* fix tabs */
+.elfinder-help .ui-tabs-panel { padding:.5em; }
+.elfinder-dialog .ui-tabs .ui-tabs-nav li a { padding:.2em 1em;}
+
+.elfinder-help-shortcuts {
+	height:300px;
+	padding:1em;
+	margin:.5em 0;
+	overflow:auto;
+}
+.elfinder-help-shortcut { white-space:nowrap; clear:both;}
+
+.elfinder-help-shortcut-pattern { float:left; width:160px;}
+
+.elfinder-help-logo {
+	width:100px;
+	height:96px;
+	float:left;
+	margin-right:1em;
+	background:url('elfinder/logo.png') center center no-repeat;
+}
+
+.elfinder-help h3 { font-size:1.5em; margin:.2em 0 .3em 0; }
+
+.elfinder-help-separator { clear:both; padding:.5em;  }
+
+.elfinder-help-link { padding:2px; }
+
+.elfinder-help .ui-priority-secondary { font-size:.9em;}
+
+.elfinder-help .ui-priority-primary { margin-bottom:7px;}
+
+.elfinder-help-team { 
+	clear: both; 
+	text-align:right; 
+	border-bottom:1px solid #ccc;
+	margin:.5em 0;
+	font-size:.9em;
+}
+
+.elfinder-help-team div { float:left; }
+.elfinder-help-license { font-size:.9em;}
+
+.elfinder-help-disabled {
+	font-weight:bold;
+	text-align:center;
+	margin:90px 0;
+}
+
+.elfinder-help .elfinder-dont-panic {
+	display:block;
+	border:1px solid transparent;
+	width:200px;
+	height:200px;
+	margin:30px auto;
+	text-decoration:none;
+	text-align:center;
+	position:relative;
+	background:#d90004;
+	-moz-box-shadow: 5px 5px 9px #111;
+	-webkit-box-shadow:  5px 5px 9px #111;
+	box-shadow:  5px 5px 9px #111;
+	background: -moz-radial-gradient(80px 80px, circle farthest-corner,  #d90004 35%, #960004 100%);
+	background: -webkit-gradient(radial, 80 80, 60, 80 80, 120, from(#d90004), to(#960004));
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+	outline:none;
+}
+
+.elfinder-help .elfinder-dont-panic span {
+	font-size:3em;
+	font-weight:bold;
+	text-align:center;
+	color:#fff;
+	position:absolute;
+	left:0;
+	top:45px;
+}
+
+
+
+
+/* File: /home/troex/Sites/git/elfinder-2.x/css/common.css */
+/*********************************************/
+/*            COMMON ELFINDER STUFFS         */
+/*********************************************/
+
+/* common container */
+.elfinder { padding:0; position:relative; display:block; }
+
+/* right to left enviroment */
+.elfinder-rtl { text-align:right; direction:rtl; }
+
+/* nav and cwd container */
+.elfinder-workzone {
+	padding: 0;
+	position:relative;
+	overflow:hidden;
+}
+
+/* dir/file permissions and symlink markers */
+.elfinder-perms,
+.elfinder-symlink {
+	position:absolute;
+	width:16px;
+	height:16px;
+	background-image:url(elfinder/toolbar.png);
+	background-repeat:no-repeat;
+	background-position:0 -528px;
+}
+
+.elfinder-symlink { }
+
+/* noaccess */
+.elfinder-na .elfinder-perms { background-position:0 -96px; }
+
+/* read only */
+.elfinder-ro .elfinder-perms { background-position:0 -64px;}
+
+/* write only */
+.elfinder-wo .elfinder-perms { background-position:0 -80px;}
+
+/* drag helper */
+.elfinder-drag-helper {
+	width:60px;
+	height:50px;
+	padding:0 0 0 25px;
+	z-index:100000;
+}
+
+/* drag helper "plus" icon */
+.elfinder-drag-helper-icon-plus {
+	position:absolute;
+	width:16px;
+	height:16px;
+	left:43px;
+	top:55px;
+	background:url('elfinder/toolbar.png') 0 -544px no-repeat;
+	display:none;
+}
+
+/* show "plus" icon when ctrl/shift pressed */
+.elfinder-drag-helper-plus .elfinder-drag-helper-icon-plus { display:block; }
+
+/* files num in drag helper */
+.elfinder-drag-num {
+	position:absolute;
+	top:0;
+	left:0;
+	width:16px;
+	height:14px;
+	text-align:center;
+	padding-top:2px;
+	font-size:12px;
+	font-weight:bold;
+	color:#fff;
+	background-color:red;
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px; 
+	border-radius: 8px;
+}
+
+/* icon in drag helper */
+.elfinder-drag-helper .elfinder-cwd-icon { margin:0 0 0 -24px; float:left; }
+
+/* transparent overlay >_< */
+.elfinder-overlay { opacity: 0; filter:Alpha(Opacity=0); }
+
+/* panels under/below cwd (for search field etc) */
+.elfinder .elfinder-panel {
+	position:relative;
+	background-image:none;
+	padding:7px 12px;
+}
+
+
+
+
+
+
+/* File: /home/troex/Sites/git/elfinder-2.x/css/contextmenu.css */
+/* menu and submenu */
+.elfinder-contextmenu,
+.elfinder-contextmenu-sub {
+	display:none;
+	position:absolute;
+	border:1px solid #aaa;
+	background:#fff;
+	color:#555;
+	padding:4px 0;
+}
+
+/* submenu */
+.elfinder-contextmenu-sub { top:5px; }
+/* submenu in rtl/ltr enviroment */
+.elfinder-contextmenu-ltr .elfinder-contextmenu-sub { margin-left:-5px; }
+.elfinder-contextmenu-rtl .elfinder-contextmenu-sub { margin-right:-5px; }
+
+/* menu item */
+.elfinder-contextmenu-item {
+	position:relative;
+	display:block;
+	padding:4px 30px;
+	text-decoration:none;
+	white-space:nowrap;
+	cursor:default;
+}
+/* text in item */
+.elfinder-contextmenu .elfinder-contextmenu-item span { font-size:.76em; display:block; }
+
+
+
+/* submenu item in rtl/ltr enviroment */
+.elfinder-contextmenu-ltr .elfinder-contextmenu-item { text-align:left; }
+.elfinder-contextmenu-rtl .elfinder-contextmenu-item { text-align:right; }
+.elfinder-contextmenu-ltr .elfinder-contextmenu-sub .elfinder-contextmenu-item { padding-left:12px;  }
+.elfinder-contextmenu-rtl .elfinder-contextmenu-sub .elfinder-contextmenu-item { padding-right:12px; }
+
+/* command/submenu icon */
+.elfinder-contextmenu-arrow,
+.elfinder-contextmenu-icon {
+	position:absolute;
+	top:50%;
+	margin-top:-8px;
+}
+
+/* command icon in rtl/ltr enviroment */
+.elfinder-contextmenu-ltr .elfinder-contextmenu-icon { left:8px; }
+.elfinder-contextmenu-rtl .elfinder-contextmenu-icon { right:8px; }
+
+/* arrow icon */
+.elfinder-contextmenu-arrow {
+	width:16px;
+	height:16px;
+	background:url('elfinder/arrows-normal.png') 5px 4px no-repeat;
+}
+
+/* arrow icon in rtl/ltr enviroment */
+.elfinder-contextmenu-ltr .elfinder-contextmenu-arrow { right:5px; }
+.elfinder-contextmenu-rtl .elfinder-contextmenu-arrow { left:5px; background-position: 0 -10px; }
+
+/* disable ui border/bg image on hover */
+.elfinder-contextmenu .ui-state-hover { border:0 solid; background-image:none;}
+
+/* separator */
+.elfinder-contextmenu-separator {
+	height:0px;
+	border-top:1px solid #ccc;
+	margin:0 1px;
+}
+
+/* File: /home/troex/Sites/git/elfinder-2.x/css/cwd.css */
+/******************************************************************/
+/*                     CURRENT DIRECTORY STYLES                   */
+/******************************************************************/
+/* cwd container to avoid selectable on scrollbar */
+.elfinder-cwd-wrapper {
+	overflow: auto;
+	position:relative;
+	padding:2px;
+	margin:0;
+}
+
+.elfinder-cwd-wrapper-list { padding:0; }
+
+/* container */
+.elfinder-cwd { 
+	position:relative;
+	font-size:.7em;
+	cursor:default;
+	padding:0;
+	margin:0;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+/* container active on dropenter */
+.elfinder .elfinder-cwd-wrapper.elfinder-droppable-active {
+	padding:0;
+	border:2px solid #8cafed;
+}
+
+
+/************************** ICONS VIEW ********************************/
+
+/* file container */
+.elfinder-cwd-view-icons .elfinder-cwd-file {
+	width:120px;
+	height:80px;
+	padding-bottom:2px;
+	cursor:default;
+	overflow:hidden;
+/*	position:relative;*/
+}
+
+/* ltr/rtl enviroment */
+.elfinder-ltr .elfinder-cwd-view-icons .elfinder-cwd-file { float:left;  margin:0 3px 12px 0; }
+.elfinder-rtl .elfinder-cwd-view-icons .elfinder-cwd-file { float:right; margin:0 0 5px 3px; }
+
+/* remove ui hover class border */
+.elfinder-cwd-view-icons .elfinder-cwd-file .ui-state-hover { border:0 solid; }
+
+/* icon wrapper to create selected highlight around icon */
+.elfinder-cwd-view-icons .elfinder-cwd-file-wrapper {
+	width:52px;
+	height:52px;
+	margin:1px auto 1px auto;
+	padding:2px;
+	position:relative;
+}
+
+/* file name place */
+.elfinder-cwd-view-icons .elfinder-cwd-filename {
+	text-align:center;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+	margin:3px 1px 0 1px;
+	padding:1px;
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px; 
+	border-radius: 8px;
+}
+
+/* permissions/symlink markers */
+.elfinder-cwd-view-icons .elfinder-perms { bottom:4px; right:2px; }
+.elfinder-cwd-view-icons .elfinder-symlink { bottom:6px; left:0px; }
+
+/* icon/thumbnail */
+.elfinder-cwd-icon {
+	display:block;
+	width:48px;
+	height:48px;
+	margin:0 auto;
+	background: url('elfinder/icons-big.png') 0 0 no-repeat;
+	-moz-background-clip: padding; 
+	-webkit-background-clip: padding-box; 
+	background-clip: padding-box;
+}
+
+/* "opened folder" icon on dragover */
+.elfinder-cwd .elfinder-droppable-active .elfinder-cwd-icon { background-position: 0 -100px; }
+
+/* mimetypes icons */
+.elfinder-cwd-icon-directory         { background-position:0 -50px; }
+.elfinder-cwd-icon-application       { background-position:0 -150px; }
+.elfinder-cwd-icon-x-empty, 
+.elfinder-cwd-icon-text              { background-position:0  -200px; }
+.elfinder-cwd-icon-image, 
+.elfinder-cwd-icon-vnd-adobe-photoshop, 
+.elfinder-cwd-icon-postscript        { background-position:0 -250px;  }
+.elfinder-cwd-icon-audio             { background-position:0 -300px; }
+.elfinder-cwd-icon-video,
+.elfinder-cwd-icon-flash-video       { background-position:0 -350px; }
+.elfinder-cwd-icon-rtf, 
+.elfinder-cwd-icon-rtfd              { background-position: 0 -401px; }
+.elfinder-cwd-icon-pdf               { background-position: 0 -450px; }
+.elfinder-cwd-icon-vnd-ms-office,
+.elfinder-cwd-icon-msword,
+.elfinder-cwd-icon-vnd-ms-word,
+.elfinder-cwd-icon-vnd-oasis-opendocument-text,
+.elfinder-cwd-icon-ms-excel,
+.elfinder-cwd-icon-vnd-ms-excel,
+.elfinder-cwd-icon-vnd-oasis-opendocument-spreadsheet,
+.elfinder-cwd-icon-vnd-ms-powerpoint,
+.elfinder-cwd-icon-vnd-oasis-opendocument-presentation { background-position: 0 -500px; }
+.elfinder-cwd-icon-html              { background-position: 0 -550px; }
+.elfinder-cwd-icon-css               { background-position: 0 -600px; }
+.elfinder-cwd-icon-javascript, 
+.elfinder-cwd-icon-x-javascript      { background-position: 0 -650px; }
+.elfinder-cwd-icon-x-perl            { background-position: 0 -700px; }
+.elfinder-cwd-icon-x-python          { background-position: 0 -750px; }
+.elfinder-cwd-icon-x-ruby            { background-position: 0 -800px; }
+.elfinder-cwd-icon-x-sh, 
+.elfinder-cwd-icon-x-shellscript     { background-position: 0 -850px; }
+.elfinder-cwd-icon-x-c,
+.elfinder-cwd-icon-x-csrc,
+.elfinder-cwd-icon-x-chdr,
+.elfinder-cwd-icon-x-c--, 
+.elfinder-cwd-icon-x-c--src,
+.elfinder-cwd-icon-x-c--hdr, 
+.elfinder-cwd-icon-x-java, 
+.elfinder-cwd-icon-x-java-source     { background-position: 0 -900px; }
+.elfinder-cwd-icon-x-php             { background-position: 0 -950px; }
+.elfinder-cwd-icon-xml               { background-position: 0 -1000px; }
+.elfinder-cwd-icon-zip, 
+.elfinder-cwd-icon-x-7z-compressed   { background-position: 0 -1050px; }
+.elfinder-cwd-icon-x-gzip,  
+.elfinder-cwd-icon-x-tar             { background-position: 0 -1100px; }
+.elfinder-cwd-icon-x-bzip, 
+.elfinder-cwd-icon-x-bzip2           { background-position: 0 -1150px; }
+.elfinder-cwd-icon-x-rar, 
+.elfinder-cwd-icon-x-rar-compressed  { background-position: 0 -1200px; }
+.elfinder-cwd-icon-x-shockwave-flash { background-position: 0 -1250px; }
+.elfinder-cwd-icon-group             { background-position:0 -1300px;}
+
+/* textfield inside icon */
+.elfinder-cwd input { width:100%; border:0px solid; margin:0; padding:0; }
+.elfinder-cwd-view-icons input {text-align:center; }
+
+.elfinder-cwd-view-icons { text-align:center; }
+
+
+/************************************  LIST VIEW ************************************/
+
+/*.elfinder-cwd-view-list { padding:0 0 4px 0; }*/
+
+.elfinder-cwd table { width:100%; border-collapse:collapse; border:0 solid; margin:0 0 10px 0; }
+.elfinder .elfinder-cwd table thead tr { border-left:0 solid; border-top:0 solid; border-right:0 solid; }
+.elfinder .elfinder-cwd table thead td { font-size:.9em;}
+.elfinder .elfinder-cwd table td { 
+	padding:3px 12px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-align:right;
+	cursor:default;
+	border:0 solid;
+	
+}
+
+.elfinder-ltr .elfinder-cwd table td { text-align:right; }
+.elfinder-ltr .elfinder-cwd table td:first-child { text-align:left; }
+.elfinder-rtl .elfinder-cwd table td { text-align:left; }
+.elfinder-rtl .elfinder-cwd table td:first-child { text-align:right; }
+
+.elfinder-odd-row { background:#eee; }
+
+/* filename container */
+.elfinder-cwd-view-list .elfinder-cwd-file-wrapper { width:97%; position:relative; }
+/* filename container in ltr/rtl enviroment */
+.elfinder-ltr .elfinder-cwd-view-list .elfinder-cwd-file-wrapper { padding-left:23px;  }
+.elfinder-rtl .elfinder-cwd-view-list .elfinder-cwd-file-wrapper { padding-right:23px; }
+
+/* premissions/symlink marker */
+.elfinder-cwd-view-list .elfinder-perms, 
+.elfinder-cwd-view-list .elfinder-symlink { top:50%; margin-top:-6px; }
+/* markers in ltr/rtl enviroment */
+.elfinder-ltr .elfinder-cwd-view-list .elfinder-perms   { left:7px;  }
+.elfinder-ltr .elfinder-cwd-view-list .elfinder-symlink { left:-7px; }
+
+/* file icon */
+.elfinder-cwd-view-list td .elfinder-cwd-icon {
+	width:16px;
+	height:16px;
+	position:absolute;
+	top:50%;
+	margin-top:-8px;
+	background-image:url(elfinder/icons-small.png);
+}
+/* icon in ltr/rtl enviroment */
+.elfinder-ltr .elfinder-cwd-view-list .elfinder-cwd-icon { left:0;  }
+.elfinder-rtl .elfinder-cwd-view-list .elfinder-cwd-icon { right:0; }
+
+
+
+/* File: /home/troex/Sites/git/elfinder-2.x/css/dialog.css */
+/*********************************************/
+/*                DIALOGS STYLES             */
+/*********************************************/
+
+/* common dialogs class */
+.std42-dialog {	padding:0; }
+
+/* titlebar */
+.std42-dialog .ui-dialog-titlebar {
+	border-left:0 solid transparent;
+	border-top:0 solid transparent;
+	border-right:0 solid transparent;
+	-moz-border-radius-bottomleft: 0; 
+	-webkit-border-bottom-left-radius: 0; 
+	border-bottom-left-radius: 0; 
+	-moz-border-radius-bottomright: 0; 
+	-webkit-border-bottom-right-radius: 0; 
+	border-bottom-right-radius: 0;
+	font-size:.82em;
+	font-weight:normal;
+	padding:.2em 1em;
+}
+
+.std42-dialog .ui-dialog-titlebar-close,
+.std42-dialog .ui-dialog-titlebar-close:hover { padding:1px; }
+
+.elfinder-rtl .elfinder-dialog .ui-dialog-titlebar { text-align:right; }
+.elfinder-rtl .elfinder-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close { right:auto; left:.3em; }
+
+/* content */
+.std42-dialog .ui-dialog-content {
+	padding:.3em .5em;
+	font-size:.72em;
+}
+
+/* buttons */
+.std42-dialog .ui-dialog-buttonpane {
+	border:0 solid;
+	margin:0;
+	padding:.5em .7em;
+	font-size:.76em;
+}
+
+.std42-dialog .ui-dialog-buttonpane button { margin:0 0 0 .4em;	padding:0; outline:0 solid; }
+.std42-dialog .ui-dialog-buttonpane button span { padding:2px 9px; }
+
+.elfinder-dialog .ui-resizable-e, 
+.elfinder-dialog .ui-resizable-s { width:0; height:0;}
+
+.std42-dialog .ui-button input { cursor: pointer;}
+
+/* error/notify/confirm dialogs icon */
+.elfinder-dialog-icon {
+	position:absolute;
+	width:32px;
+	height:32px;
+	left:12px;
+	top:50%;
+	margin-top:-15px;
+	background:url("elfinder/dialogs.png") 0 0 no-repeat;
+}
+
+.elfinder-rtl .elfinder-dialog-icon { left:auto; right:12px;}
+
+
+
+/*********************** ERROR DIALOG **************************/
+
+.elfinder-dialog-error .ui-dialog-content,
+.elfinder-dialog-confirm .ui-dialog-content { padding-left: 56px; min-height:35px; }
+
+.elfinder-rtl .elfinder-dialog-error .ui-dialog-content,
+.elfinder-rtl .elfinder-dialog-confirm .ui-dialog-content { padding-left:0; padding-right: 56px; }
+
+/*********************** NOTIFY DIALOG **************************/
+
+.elfinder-dialog-notify .ui-dialog-titlebar-close { display:none; }
+.elfinder-dialog-notify .ui-dialog-content { padding:0; }
+
+/* one notification container */
+.elfinder-notify {
+	border-bottom:1px solid #ccc;
+	position:relative;
+	padding:.5em;
+	
+	text-align:center;
+	overflow:hidden;
+}
+
+.elfinder-ltr .elfinder-notify { padding-left:30px; }
+.elfinder-rtl .elfinder-notify { padding-right:30px; }
+
+.elfinder-notify:last-child { border:0 solid; }
+
+/* progressbar */
+.elfinder-notify-progressbar {
+	width:180px;
+	height:8px;
+	border:1px solid #aaa;
+	background:#f5f5f5;
+	margin:5px auto;
+	overflow:hidden;
+}
+
+.elfinder-notify-progress {
+	width:100%;
+	height:8px;
+	background:url(elfinder/progress.gif) center center repeat-x;
+}
+
+.elfinder-notify-progressbar, .elfinder-notify-progress {
+	-moz-border-radius: 2px; 
+	-webkit-border-radius: 2px; 
+	border-radius: 2px;
+}
+
+/* icons */
+.elfinder-dialog-icon-open, 
+.elfinder-dialog-icon-file        { background-position: 0 -225px; }
+.elfinder-dialog-icon-reload      { background-position: 0 -225px; }
+.elfinder-dialog-icon-mkdir       { background-position: 0 -64px; }
+.elfinder-dialog-icon-mkfile      { background-position: 0 -96px; }
+.elfinder-dialog-icon-copy,
+.elfinder-dialog-icon-prepare,
+.elfinder-dialog-icon-move        { background-position: 0 -128px;}
+.elfinder-dialog-icon-upload      { background-position: 0 -160px; }
+.elfinder-dialog-icon-rm          { background-position: 0 -192px; }
+.elfinder-dialog-icon-download    { background-position: 0 -260px; }
+.elfinder-dialog-icon-save        { background-position: 0 -295px; }
+.elfinder-dialog-icon-rename      { background-position: 0 -330px; }
+.elfinder-dialog-icon-archive,
+.elfinder-dialog-icon-extract     { background-position: 0 -365px; }
+.elfinder-dialog-icon-search      { background-position: 0 -402px; }
+
+/*********************** CONFIRM DIALOG **************************/
+
+.elfinder-dialog-confirm-applyall {	padding-top:3px; }
+
+.elfinder-dialog-confirm .elfinder-dialog-icon { background-position:0 -32px; }
+
+
+
+/*********************** FILE INFO DIALOG **************************/
+
+
+.elfinder-info-title .elfinder-cwd-icon {
+	float:left;
+	width:48px;
+	height:48px;
+	margin-right:1em;
+}
+
+.elfinder-info-title strong { display:block; padding:.3em 0 .5em 0; }
+
+.elfinder-info-tb {
+	min-width:200px;
+	border:0 solid;
+	margin:1em .2em 1em .2em;
+	font-size:.9em;
+}
+
+.elfinder-info-tb td { white-space:nowrap; padding:2px; }
+
+.elfinder-info-tb tr td:first-child { text-align:right;  }
+
+.elfinder-info-tb span { float:left;}
+.elfinder-info-tb a { outline: none; text-decoration:underline; }
+.elfinder-info-tb a:hover { text-decoration:none; }
+.elfinder-info-spinner { 
+	width:14px;
+	height:14px;
+	float:left;
+	background: url("elfinder/spinner-mini.gif") center center no-repeat;
+	margin:0 5px; 
+}
+
+/*********************** UPLOAD DIALOG **************************/
+
+.elfinder-upload-dropbox {
+	font-size:1.2em;
+	text-align:center;
+	padding:2em 0;
+	border:3px dashed #aaa;
+}
+
+.elfinder-upload-dropbox.ui-state-hover {
+	background:#dfdfdf;
+	border:3px dashed #555;
+}
+
+.elfinder-upload-dialog-or {
+	font-size:1.2em;
+	margin:.3em 0;
+	text-align:center;
+}
+
+.elfinder-upload-dialog-wrapper { text-align:center; }
+
+.elfinder-upload-dialog-wrapper .ui-button { position:relative;	overflow:hidden; }
+
+.elfinder-upload-dialog-wrapper .ui-button form {
+	position:absolute;
+	right:0;
+	top:0;
+	opacity: 0; filter:Alpha(Opacity=0);
+}
+
+.elfinder-upload-dialog-wrapper .ui-button form input {
+	padding:0 20px;
+	font-size:3em;
+
+}
+
+
+/* dialog for elFinder itself */
+.dialogelfinder .dialogelfinder-drag {
+	border-left:0 solid;
+	border-top:0 solid;
+	border-right:0 solid;
+	font-weight:normal;
+	font-size:.9em;
+	padding:2px 12px;
+	cursor:move;
+	position:relative;
+	text-align:left;
+}
+
+.elfinder-rtl .dialogelfinder-drag { text-align:right;}
+
+.dialogelfinder-drag-close {
+	position: absolute;
+	top:50%;
+	margin-top:-8px;
+}
+
+.elfinder-ltr .dialogelfinder-drag-close { right:12px; }
+.elfinder-rtl .dialogelfinder-drag-close { left:12px; }
+
+
+
+/* File: /home/troex/Sites/git/elfinder-2.x/css/navbar.css */
+/*********************************************/
+/*              NAVIGATION PANEL             */
+/*********************************************/
+
+/* container */
+.elfinder .elfinder-navbar {
+	width:230px;
+	padding:3px 5px;
+	font-size:.72em;
+	background-image:none;
+	border-top:0 solid;
+	border-bottom:0 solid;
+	overflow:auto;
+	display:none;
+	position:relative;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+/*	border:1px solid #111;*/
+}
+
+
+/* ltr/rtl enviroment */
+.elfinder-ltr .elfinder-navbar { float:left;  border-left:0 solid; }
+.elfinder-rtl .elfinder-navbar { float:right; border-right:0 solid; }
+.elfinder-ltr .ui-resizable-e { margin-left:10px; }
+
+/* folders tree container */
+.elfinder-tree { display:table; width:100%; margin: 0 0 .5em 0; }
+
+/* one folder wrapper */
+.elfinder-navbar-wrapper, .elfinder-place-wrapper { }
+
+/* folder */
+.elfinder-navbar-dir { 
+	position:relative; 
+	display:block; 
+	white-space:nowrap;
+	padding:3px 12px;
+	margin: 0;
+	outline:0 solid;
+	border:1px solid transparent;
+	cursor:default;
+	
+}
+
+/* ltr/rtl enviroment */
+.elfinder-ltr .elfinder-navbar-dir { padding-left:35px; }
+.elfinder-rtl .elfinder-navbar-dir { padding-right:35px; }
+
+/* arrow before icon */
+.elfinder-navbar-arrow {
+	width:12px;
+	height:14px;
+	position:absolute;
+	display:none;
+	top:50%;
+	margin-top:-8px;
+	background-image:url("elfinder/arrows-normal.png");
+	background-repeat:no-repeat;
+/*	border:1px solid #111;*/
+}
+
+.ui-state-active .elfinder-navbar-arrow { background-image:url("elfinder/arrows-active.png"); }
+
+/* collapsed/expanded arrow view */
+.elfinder-navbar-collapsed .elfinder-navbar-arrow { display:block; }
+
+/* arrow ltr/rtl enviroment */
+.elfinder-ltr .elfinder-navbar-collapsed .elfinder-navbar-arrow { background-position: 0 4px; left:0; }
+.elfinder-rtl .elfinder-navbar-collapsed .elfinder-navbar-arrow { background-position: 0 -10px; right:0;  }
+.elfinder-ltr .elfinder-navbar-expanded  .elfinder-navbar-arrow,
+.elfinder-rtl .elfinder-navbar-expanded  .elfinder-navbar-arrow { background-position:0 -21px; }
+
+
+/* folder icon */
+.elfinder-navbar-icon {
+	width:16px;
+	height:16px;
+	position:absolute;
+	top:50%;
+	margin-top:-8px;
+	background-image:url("elfinder/toolbar.png");
+	background-repeat:no-repeat;
+	background-position:0 -16px;
+}
+
+/* ltr/rtl enviroment */
+.elfinder-ltr .elfinder-navbar-icon { left:14px; }
+.elfinder-rtl .elfinder-navbar-icon { right:14px; }
+
+/* root folder */
+.elfinder-tree   .elfinder-navbar-root .elfinder-navbar-icon { background-position:0 0; }
+.elfinder-places .elfinder-navbar-root .elfinder-navbar-icon { background-position:0 -48px; }
+
+/* icon in active/hove/dropactive state */
+.ui-state-active           .elfinder-navbar-icon, 
+.elfinder-droppable-active .elfinder-navbar-icon, 
+.ui-state-hover            .elfinder-navbar-icon { background-position:0 -32px; }
+
+/* subdirs tree */
+.elfinder-navbar-subtree { display:none; }
+
+/* ltr/rtl enviroment */
+.elfinder-ltr .elfinder-navbar-subtree { margin-left:12px; }
+.elfinder-rtl .elfinder-navbar-subtree { margin-right:12px; }
+
+
+/* spinner */
+.elfinder-navbar-spinner { 
+	width:14px;
+	height:14px;
+	position:absolute;
+	display:block;
+	top:50%;
+	margin-top:-7px;
+	background: url("elfinder/spinner-mini.gif") center center no-repeat;
+}
+/* spinner ltr/rtl enviroment */
+.elfinder-ltr .elfinder-navbar-spinner { left:0;  margin-left:-2px; }
+.elfinder-rtl .elfinder-navbar-spinner { right:0; margin-right:-2px; }
+
+/* permissions marker */
+.elfinder-navbar .elfinder-perms { top:50%; margin-top:-8px; }
+
+/* permissions/symlink markers ltr/rtl enviroment */
+.elfinder-ltr .elfinder-navbar .elfinder-perms   { left:  18px; }
+.elfinder-rtl .elfinder-navbar .elfinder-perms   { right: 18px; }
+.elfinder-ltr .elfinder-navbar .elfinder-symlink { left:  8px; }
+.elfinder-rtl .elfinder-navbar .elfinder-symlink { right: 8px; }
+
+/* resizable */
+.elfinder-navbar .ui-resizable-handle { width:12px; background:transparent url('elfinder/resize.png') center center no-repeat; left:0; }
+.elfinder-nav-handle-icon {
+	position:absolute;
+	top:50%;
+	margin:-8px 2px 0 2px;
+	opacity: .5; filter:Alpha(Opacity=50);
+}
+
+.elfinder-places { border:1px solid transparent;}
+.elfinder-places.elfinder-droppable-active {
+	border:1px solid #8cafed;
+}
+
+.elfinder-place-drag .elfinder-navbar-dir { font-size:.9em;}
+
+
+
+
+/* File: /home/troex/Sites/git/elfinder-2.x/css/places.css */
+
+/* File: /home/troex/Sites/git/elfinder-2.x/css/quicklook.css */
+/* quicklook window */
+.elfinder-quicklook {
+	position:absolute;
+	background:url("elfinder/quicklook-bg.png");
+	display:none;
+	overflow:hidden;
+	border-radius:7px;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	padding:20px 0 40px 0;
+}
+
+.elfinder-quicklook .ui-resizable-se { 
+	width:14px;
+	height:14px;
+	right:5px;
+	bottom:3px;
+	background:url("elfinder/toolbar.png") 0 -496px no-repeat;}
+
+/* quicklook fullscreen window */
+.elfinder-quicklook-fullscreen {
+	border-radius:0;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	-webkit-background-clip: padding-box;
+/*	background-clip:padding-box;*/
+	padding:0;
+	background:#000;
+	z-index:90000;
+	display:block;
+}
+/* hide titlebar in fullscreen mode */
+.elfinder-quicklook-fullscreen .elfinder-quicklook-titlebar { display:none; }
+
+/* hide preview border in fullscreen mode */
+.elfinder-quicklook-fullscreen .elfinder-quicklook-preview { border:0 solid ;}
+
+/* quicklook titlebar */
+.elfinder-quicklook-titlebar {
+	text-align:center;
+	background:#777;
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:20px;
+	-moz-border-radius-topleft: 7px; 
+	-webkit-border-top-left-radius: 7px; 
+	border-top-left-radius: 7px;
+	-moz-border-radius-topright: 7px; 
+	-webkit-border-top-right-radius: 7px; 
+	border-top-right-radius: 7px;
+	cursor:move;
+}
+
+/* window title */
+.elfinder-quicklook-title { 
+	font-size:.7em;
+	color:#fff; 
+	white-space:nowrap; 
+	overflow:hidden;
+	padding:2px 0;
+}
+
+/* icon "close" in titlebar */
+.elfinder-quicklook-titlebar .ui-icon { 
+	position:absolute;
+	left : 4px;
+	top:50%;
+	margin-top:-8px;
+	width:16px;
+	height:16px;
+	cursor:default;
+}
+
+/* main part of quicklook window */
+.elfinder-quicklook-preview {
+	overflow:hidden;
+	position:relative;
+	border:0 solid;
+	border-left:1px solid transparent;
+	border-right:1px solid transparent;
+	height:100%;
+}
+
+/* wrapper for file info/icon */
+.elfinder-quicklook-info-wrapper {
+	position:absolute;
+	width:100%;
+	left:0;
+	top:50%;
+	margin-top:-50px;
+}
+
+/* file info */
+.elfinder-quicklook-info {
+	padding: 0 12px 0 112px;
+}
+
+/* file name in info */
+.elfinder-quicklook-info .elfinder-quicklook-info-data:first-child { 
+	color:#fff; 
+	font-weight:bold; 
+	padding-bottom:.5em; 
+}
+
+/* other data in info */
+.elfinder-quicklook-info-data {
+	font-size:.72em;
+	padding-bottom:.2em;
+	color:#fff;
+}
+
+
+/* file icon */
+.elfinder-quicklook .elfinder-cwd-icon {
+	position:absolute;
+	left:32px;
+	top:50%;
+	margin-top:-20px;
+}
+
+/* image in preview */
+.elfinder-quicklook-preview img {
+	display:block;
+	margin:0 auto;
+}
+
+/* navigation bar on quicklook window bottom */
+.elfinder-quicklook-navbar {
+	position:absolute;
+	left:50%;
+	bottom:4px;
+	width:140px;
+	height:32px;
+	padding:0px;
+	margin-left:-70px;
+	border:1px solid transparent;
+	border-radius:19px;
+	-moz-border-radius:19px;
+	-webkit-border-radius:19px;
+}
+
+/* navigation bar in fullscreen mode */
+.elfinder-quicklook-fullscreen .elfinder-quicklook-navbar {
+	width:188px;
+	margin-left:-94px;
+	padding:5px;
+	border:1px solid #eee;
+	background:#000;
+}
+
+/* show close icon in fullscreen mode */
+.elfinder-quicklook-fullscreen .elfinder-quicklook-navbar-icon-close,
+.elfinder-quicklook-fullscreen .elfinder-quicklook-navbar-separator {
+	display:inline;
+}
+
+/* icons in navbar */
+.elfinder-quicklook-navbar-icon {
+	width:32px;
+	height:32px;
+	margin:0 7px;
+	float:left;
+	background:url("elfinder/quicklook-icons.png") 0 0 no-repeat;
+	
+}
+
+/* fullscreen icon */
+.elfinder-quicklook-navbar-icon-fullscreen {
+	background-position:0 -64px;
+}
+
+/* exit fullscreen icon */
+.elfinder-quicklook-navbar-icon-fullscreen-off {
+	background-position:0 -96px;
+}
+
+/* prev file icon */
+.elfinder-quicklook-navbar-icon-prev {
+	background-position:0 0;
+}
+
+/* next file icon */
+.elfinder-quicklook-navbar-icon-next {
+	background-position:0 -32px;
+}
+
+/* close icon */
+.elfinder-quicklook-navbar-icon-close {
+	background-position:0 -128px;
+	display:none;
+}
+
+/* icons separator */
+.elfinder-quicklook-navbar-separator {
+	width:1px;
+	height:32px;
+	float:left;
+	border-left:1px solid #fff;
+	display:none;
+}
+
+/* text files preview wrapper */
+.elfinder-quicklook-preview-text-wrapper {
+	width: 100%;
+	height:100%;
+	background:#fff;
+	color:#222;
+	font-size:.9em;
+	overflow:auto;
+}
+
+/* text preview */
+pre.elfinder-quicklook-preview-text {
+	margin:0;
+	padding:3px 9px;
+}
+
+/* html/pdf preview */
+.elfinder-quicklook-preview-html,
+.elfinder-quicklook-preview-pdf {
+	width:100%;
+	height:100%;
+	background:#fff;
+	border:0 solid;
+	margin:0;
+}
+
+/* swf preview container */
+.elfinder-quicklook-preview-flash {
+	width:100%;
+	height:100%;
+}
+
+/* audio preview container */
+.elfinder-quicklook-preview-audio {
+	width:100%;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+
+/* audio preview using embed */
+embed.elfinder-quicklook-preview-audio {
+	height:30px;
+	background:transparent;
+}
+
+/* video preview container */
+.elfinder-quicklook-preview-video {
+	width:100%;
+	height:100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* File: /home/troex/Sites/git/elfinder-2.x/css/statusbar.css */
+/******************************************************************/
+/*                           STATUSBAR STYLES                     */
+/******************************************************************/
+
+
+/* statusbar container */
+.elfinder-statusbar { 
+	text-align:center; 
+	font-weight:normal;
+	padding:.2em .5em;
+	
+	border-right:0 solid transparent;
+	border-bottom:0 solid transparent;
+	border-left:0 solid transparent;
+}
+
+.elfinder-statusbar a { text-decoration:none; }
+
+.elfinder-statusbar div { font-size:.7em; }
+
+/* path in statusbar */
+.elfinder-ltr .elfinder-path { float:left;  }
+.elfinder-rtl .elfinder-path { float:right; }
+
+/* total/selected size in statusbar */
+.elfinder-ltr .elfinder-stat-size { float:right; }
+.elfinder-rtl .elfinder-stat-size { float:left; }
+
+/* File: /home/troex/Sites/git/elfinder-2.x/css/toolbar.css */
+/*********************************************/
+/*               TOOLBAR STYLES              */
+/*********************************************/
+/* toolbar container */
+.elfinder-toolbar { 
+	padding:4px 0 3px 0; 
+	border-left:0 solid transparent;
+	border-top:0 solid transparent;
+	border-right:0 solid transparent;
+}
+
+/* container for button's group */
+.elfinder-buttonset {
+	margin: 1px 4px;
+	float:left;
+	background:transparent;
+	padding:0;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+/*.elfinder-buttonset:first-child { margin:0; }*/
+
+/* button */
+.elfinder .elfinder-button {
+	width:16px;
+	height:16px;
+	margin:0;
+	padding:4px;
+	float:left;
+	overflow:hidden;
+	position:relative;
+	border:0 solid;
+}
+
+.elfinder .ui-icon-search { cursor:pointer;}
+
+.elfinder-button:first-child {
+	-moz-border-radius-topleft: 4px; 
+	-webkit-border-top-left-radius: 4px; 
+	border-top-left-radius: 4px;
+	-moz-border-radius-bottomleft: 4px; 
+	-webkit-border-bottom-left-radius: 4px; 
+	border-bottom-left-radius: 4px;
+}
+
+.elfinder-button:last-child {
+	-moz-border-radius-topright: 4px; 
+	-webkit-border-top-right-radius: 4px; 
+	border-top-right-radius: 4px;
+	-moz-border-radius-bottomright: 4px; 
+	-webkit-border-bottom-right-radius: 4px; 
+	border-bottom-right-radius: 4px;
+}
+
+/* separator between buttons, required for berder between button with ui color */
+.elfinder-toolbar-button-separator {
+	float:left;
+	padding:0;
+	height:24px;
+	border-top:0 solid;
+	border-right:0 solid;
+	border-bottom:0 solid;
+	width:0;
+}
+
+/* change icon opacity^ not button */
+.elfinder .elfinder-button.ui-state-disabled { opacity:1; filter:Alpha(Opacity=100);}
+.elfinder .elfinder-button.ui-state-disabled .elfinder-button-icon { opacity:.4; filter:Alpha(Opacity=40);}
+
+/* rtl enviroment */
+.elfinder-rtl .elfinder-buttonset { float:right; }
+
+/* icon inside button */
+.elfinder-button-icon {
+	width:16px;
+	height:16px;
+	display:block;
+	background:url('elfinder/toolbar.png')  no-repeat;
+}
+
+/* buttons icons */
+.elfinder-button-icon-home      { background-position: 0 0;  }
+.elfinder-button-icon-back      { background-position: 0 -112px; }
+.elfinder-button-icon-forward   { background-position: 0 -128px; }
+.elfinder-button-icon-up        { background-position: 0 -144px; }
+.elfinder-button-icon-reload    { background-position: 0 -160px; }
+.elfinder-button-icon-open      { background-position: 0 -176px; } 
+.elfinder-button-icon-mkdir     { background-position: 0 -192px; }
+.elfinder-button-icon-mkfile    { background-position: 0 -208px; }
+.elfinder-button-icon-rm        { background-position: 0 -224px; }
+.elfinder-button-icon-copy      { background-position: 0 -240px; }
+.elfinder-button-icon-cut       { background-position: 0 -256px; }
+.elfinder-button-icon-paste     { background-position: 0 -272px; }
+.elfinder-button-icon-getfile   { background-position: 0 -288px; }
+.elfinder-button-icon-duplicate { background-position: 0 -304px; }
+.elfinder-button-icon-rename    { background-position: 0 -320px; }
+.elfinder-button-icon-edit      { background-position: 0 -336px; }
+.elfinder-button-icon-quicklook { background-position: 0 -352px; }
+.elfinder-button-icon-upload    { background-position: 0 -368px; }
+.elfinder-button-icon-download  { background-position: 0 -384px; }
+.elfinder-button-icon-info      { background-position: 0 -400px; }
+.elfinder-button-icon-extract   { background-position: 0 -416px; }
+.elfinder-button-icon-archive   { background-position: 0 -432px; }
+.elfinder-button-icon-view      { background-position: 0 -448px; }
+.elfinder-button-icon-view-list { background-position: 0 -464px; }
+.elfinder-button-icon-help      { background-position: 0 -480px; }
+.elfinder-button-icon-resize    { background-position: 0 -512px; }
+.elfinder-button-icon-search    { background-position: 0 -561px; }
+.elfinder-button-icon-sort    { background-position: 0 -577px; }
+
+
+/* button with dropdown menu*/
+.elfinder .elfinder-menubutton { overflow:visible; }
+
+
+
+/* menu */
+.elfinder-button-menu {
+	position:absolute;
+	left:0;
+	top:26px;
+	padding:3px 0;
+}
+
+/* menu item */
+.elfinder-button-menu-item {
+	white-space:nowrap;
+	font-size:.72em;
+	cursor:default;
+	padding:5px 19px;
+	position:relative;
+}
+
+/* fix hover ui class */
+.elfinder-button-menu .ui-state-hover { border:0 solid; }
+
+.elfinder-menu-item-sort-dir {
+	width:16px;
+	height:16px;
+	position:absolute;
+	left:2px;
+	top:50%;
+	margin-top:-8px;
+	background:url("elfinder/toolbar.png") 0 -594px no-repeat;
+	display:none;
+}
+
+.elfinder-button-menu-item-selected .elfinder-menu-item-sort-dir { display:block;}
+.elfinder-menu-item-sort-desc .elfinder-menu-item-sort-dir { background-position:0 -610px;}
+/* hack for upload button */
+.elfinder-button form {
+	position:absolute;
+	top:0;
+	right:0;
+	opacity: 0; filter:Alpha(Opacity=0);
+	cursor: pointer;
+}
+
+.elfinder .elfinder-button form input { background:transparent; cursor: default;}
+
+/* search "button" */
+.elfinder .elfinder-button-search {
+	border:0 solid;
+	background:transparent;
+	padding:0;
+	margin: 1px 4px;
+	height: auto;
+	min-height: 26px;
+	float:right;
+	width:202px;
+}
+
+/* ltr/rte enviroment */
+.elfinder-ltr .elfinder-button-search { float:right; margin-right:10px; }
+.elfinder-rtl .elfinder-button-search { float:left; margin-left:10px; }
+
+/* search text field */
+.elfinder-button-search input {
+	width:160px;
+	height:22px;
+	padding:0 20px;
+	font-size:.8em;
+	line-height: 22px;
+	border:0 solid;
+	border:1px solid #aaa;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+	outline:0 solid;
+}
+
+.elfinder-rtl .elfinder-button-search input { direction:rtl; }
+
+/* icons */
+.elfinder-button-search .ui-icon {
+	position:absolute;
+	height:18px;
+	top: 50%;
+	margin:-9px 4px 0 4px;
+	opacity: .6; 
+	filter:Alpha(Opacity=60);
+}
+
+/* search/close icons */
+.elfinder-ltr .elfinder-button-search .ui-icon-search { left:0;}
+.elfinder-rtl .elfinder-button-search .ui-icon-search { right:0;}
+.elfinder-ltr .elfinder-button-search .ui-icon-close { right:0;}
+.elfinder-rtl .elfinder-button-search .ui-icon-close { left:0;}
+
+
+
+
+
+
+/**
+ * MacOS X like theme for elFinder.
+ * Required jquery ui "smoothness" theme.
+ *
+ * @author Dmitry (dio) Levashov
+ **/
+
+/* dialogs */
+
+.std42-dialog, .std42-dialog .ui-widget-content { background-color:#ededed; background-image:none; background-clip: content-box; }
+
+/* navbar */
+.elfinder .elfinder-navbar { background:#dde4eb; }
+.elfinder-navbar .ui-state-hover  { background:transparent; border-color:transparent; }
+.elfinder-navbar .ui-state-active { background: #3875d7;    border-color:#3875d7; color:#fff; }
+/* disabled elfinder */
+.elfinder-disabled .elfinder-navbar .ui-state-active { background: #dadada; border-color:#aaa; color:#fff; }
+
+
+/* current directory */
+/* selected file in "icons" view */
+.elfinder-cwd-view-icons .elfinder-cwd-file .ui-state-hover { background:#ccc; }
+/* list view*/
+.elfinder-cwd table tr:nth-child(odd) { background-color:#edf3fe; }
+.elfinder-cwd table tr { border-top:1px solid #fff; }
+
+/* common selected background/color */
+.elfinder-cwd-view-icons .elfinder-cwd-file .elfinder-cwd-filename.ui-state-hover,
+.elfinder-cwd table td.ui-state-hover,
+.elfinder-button-menu .ui-state-hover { background: #3875d7; color:#fff;}
+/* disabled elfinder */
+.elfinder-disabled .elfinder-cwd-view-icons .elfinder-cwd-file .elfinder-cwd-filename.ui-state-hover,
+.elfinder-disabled .elfinder-cwd table td.ui-state-hover { background:#dadada;}
+
+/* statusbar */
+.elfinder .elfinder-statusbar { color:#555; }
+.elfinder .elfinder-statusbar a { text-decoration:none; color:#555;}
+
+
+.std42-dialog .elfinder-help, .std42-dialog .elfinder-help .ui-widget-content { background:#fff;}
+
+/* contextmenu */
+.elfinder-contextmenu .ui-state-hover { background: #3875d7; color:#fff; }
+.elfinder-contextmenu .ui-state-hover .elfinder-contextmenu-arrow { background-image:url('../img/arrows-active.png'); }
+
+
+
+
+
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url(/assets/bootstrap/glyphiconshalflings-regular.eot);
+  src: url(/assets/bootstrap/glyphiconshalflings-regular.eot?#iefix) format("embedded-opentype"), url(/assets/bootstrap/glyphiconshalflings-regular.woff) format("woff"), url(/assets/bootstrap/glyphiconshalflings-regular.ttf) format("truetype"), url(/assets/bootstrap/glyphiconshalflings-regular.svg#glyphicons_halflingsregular) format("svg");
+}
+
+/* line 34, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon:before {
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 43, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-glass:before {
+  content: "\e001";
+}
+
+/* line 44, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-music:before {
+  content: "\e002";
+}
+
+/* line 45, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-search:before {
+  content: "\e003";
+}
+
+/* line 46, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-envelope:before {
+  content: "\2709";
+}
+
+/* line 47, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-heart:before {
+  content: "\e005";
+}
+
+/* line 48, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-star:before {
+  content: "\e006";
+}
+
+/* line 49, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-star-empty:before {
+  content: "\e007";
+}
+
+/* line 50, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-user:before {
+  content: "\e008";
+}
+
+/* line 51, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-film:before {
+  content: "\e009";
+}
+
+/* line 52, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-th-large:before {
+  content: "\e010";
+}
+
+/* line 53, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-th:before {
+  content: "\e011";
+}
+
+/* line 54, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-th-list:before {
+  content: "\e012";
+}
+
+/* line 55, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-ok:before {
+  content: "\e013";
+}
+
+/* line 56, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-remove:before {
+  content: "\e014";
+}
+
+/* line 57, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-zoom-in:before {
+  content: "\e015";
+}
+
+/* line 58, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-zoom-out:before {
+  content: "\e016";
+}
+
+/* line 59, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-off:before {
+  content: "\e017";
+}
+
+/* line 60, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-signal:before {
+  content: "\e018";
+}
+
+/* line 61, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-cog:before {
+  content: "\e019";
+}
+
+/* line 62, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-trash:before {
+  content: "\e020";
+}
+
+/* line 63, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-home:before {
+  content: "\e021";
+}
+
+/* line 64, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-file:before {
+  content: "\e022";
+}
+
+/* line 65, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-time:before {
+  content: "\e023";
+}
+
+/* line 66, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-road:before {
+  content: "\e024";
+}
+
+/* line 67, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-download-alt:before {
+  content: "\e025";
+}
+
+/* line 68, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-download:before {
+  content: "\e026";
+}
+
+/* line 69, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-upload:before {
+  content: "\e027";
+}
+
+/* line 70, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-inbox:before {
+  content: "\e028";
+}
+
+/* line 71, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-play-circle:before {
+  content: "\e029";
+}
+
+/* line 72, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-repeat:before {
+  content: "\e030";
+}
+
+/* line 73, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-refresh:before {
+  content: "\e031";
+}
+
+/* line 74, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-list-alt:before {
+  content: "\e032";
+}
+
+/* line 75, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-lock:before {
+  content: "\e033";
+}
+
+/* line 76, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-flag:before {
+  content: "\e034";
+}
+
+/* line 77, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-headphones:before {
+  content: "\e035";
+}
+
+/* line 78, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-volume-off:before {
+  content: "\e036";
+}
+
+/* line 79, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-volume-down:before {
+  content: "\e037";
+}
+
+/* line 80, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-volume-up:before {
+  content: "\e038";
+}
+
+/* line 81, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-qrcode:before {
+  content: "\e039";
+}
+
+/* line 82, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-barcode:before {
+  content: "\e040";
+}
+
+/* line 83, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-tag:before {
+  content: "\e041";
+}
+
+/* line 84, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-tags:before {
+  content: "\e042";
+}
+
+/* line 85, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-book:before {
+  content: "\e043";
+}
+
+/* line 86, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-bookmark:before {
+  content: "\e044";
+}
+
+/* line 87, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-print:before {
+  content: "\e045";
+}
+
+/* line 88, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-camera:before {
+  content: "\e046";
+}
+
+/* line 89, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-font:before {
+  content: "\e047";
+}
+
+/* line 90, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-bold:before {
+  content: "\e048";
+}
+
+/* line 91, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-italic:before {
+  content: "\e049";
+}
+
+/* line 92, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-text-height:before {
+  content: "\e050";
+}
+
+/* line 93, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-text-width:before {
+  content: "\e051";
+}
+
+/* line 94, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-align-left:before {
+  content: "\e052";
+}
+
+/* line 95, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-align-center:before {
+  content: "\e053";
+}
+
+/* line 96, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-align-right:before {
+  content: "\e054";
+}
+
+/* line 97, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-align-justify:before {
+  content: "\e055";
+}
+
+/* line 98, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-list:before {
+  content: "\e056";
+}
+
+/* line 99, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-indent-left:before {
+  content: "\e057";
+}
+
+/* line 100, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-indent-right:before {
+  content: "\e058";
+}
+
+/* line 101, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-facetime-video:before {
+  content: "\e059";
+}
+
+/* line 102, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-picture:before {
+  content: "\e060";
+}
+
+/* line 103, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-pencil:before {
+  content: "\270f";
+}
+
+/* line 104, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-map-marker:before {
+  content: "\e062";
+}
+
+/* line 105, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-adjust:before {
+  content: "\e063";
+}
+
+/* line 106, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-tint:before {
+  content: "\e064";
+}
+
+/* line 107, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-edit:before {
+  content: "\e065";
+}
+
+/* line 108, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-share:before {
+  content: "\e066";
+}
+
+/* line 109, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-check:before {
+  content: "\e067";
+}
+
+/* line 110, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-move:before {
+  content: "\e068";
+}
+
+/* line 111, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-step-backward:before {
+  content: "\e069";
+}
+
+/* line 112, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-fast-backward:before {
+  content: "\e070";
+}
+
+/* line 113, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-backward:before {
+  content: "\e071";
+}
+
+/* line 114, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-play:before {
+  content: "\e072";
+}
+
+/* line 115, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-pause:before {
+  content: "\e073";
+}
+
+/* line 116, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-stop:before {
+  content: "\e074";
+}
+
+/* line 117, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-forward:before {
+  content: "\e075";
+}
+
+/* line 118, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-fast-forward:before {
+  content: "\e076";
+}
+
+/* line 119, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-step-forward:before {
+  content: "\e077";
+}
+
+/* line 120, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-eject:before {
+  content: "\e078";
+}
+
+/* line 121, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-chevron-left:before {
+  content: "\e079";
+}
+
+/* line 122, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-chevron-right:before {
+  content: "\e080";
+}
+
+/* line 123, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-plus-sign:before {
+  content: "\e081";
+}
+
+/* line 124, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-minus-sign:before {
+  content: "\e082";
+}
+
+/* line 125, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-remove-sign:before {
+  content: "\e083";
+}
+
+/* line 126, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-ok-sign:before {
+  content: "\e084";
+}
+
+/* line 127, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-question-sign:before {
+  content: "\e085";
+}
+
+/* line 128, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-info-sign:before {
+  content: "\e086";
+}
+
+/* line 129, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-screenshot:before {
+  content: "\e087";
+}
+
+/* line 130, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-remove-circle:before {
+  content: "\e088";
+}
+
+/* line 131, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-ok-circle:before {
+  content: "\e089";
+}
+
+/* line 132, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-ban-circle:before {
+  content: "\e090";
+}
+
+/* line 133, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-arrow-left:before {
+  content: "\e091";
+}
+
+/* line 134, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-arrow-right:before {
+  content: "\e092";
+}
+
+/* line 135, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-arrow-up:before {
+  content: "\e093";
+}
+
+/* line 136, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-arrow-down:before {
+  content: "\e094";
+}
+
+/* line 137, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-share-alt:before {
+  content: "\e095";
+}
+
+/* line 138, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-resize-full:before {
+  content: "\e096";
+}
+
+/* line 139, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-resize-small:before {
+  content: "\e097";
+}
+
+/* line 140, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-plus:before {
+  content: "\002b";
+}
+
+/* line 141, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-minus:before {
+  content: "\2212";
+}
+
+/* line 142, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-asterisk:before {
+  content: "\002a";
+}
+
+/* line 143, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-exclamation-sign:before {
+  content: "\e101";
+}
+
+/* line 144, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-gift:before {
+  content: "\e102";
+}
+
+/* line 145, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-leaf:before {
+  content: "\e103";
+}
+
+/* line 146, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-fire:before {
+  content: "\e104";
+}
+
+/* line 147, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-eye-open:before {
+  content: "\e105";
+}
+
+/* line 148, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-eye-close:before {
+  content: "\e106";
+}
+
+/* line 149, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-warning-sign:before {
+  content: "\e107";
+}
+
+/* line 150, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-plane:before {
+  content: "\e108";
+}
+
+/* line 151, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-calendar:before {
+  content: "\e109";
+}
+
+/* line 152, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-random:before {
+  content: "\e110";
+}
+
+/* line 153, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-comment:before {
+  content: "\e111";
+}
+
+/* line 154, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-magnet:before {
+  content: "\e112";
+}
+
+/* line 155, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-chevron-up:before {
+  content: "\e113";
+}
+
+/* line 156, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-chevron-down:before {
+  content: "\e114";
+}
+
+/* line 157, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-retweet:before {
+  content: "\e115";
+}
+
+/* line 158, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-shopping-cart:before {
+  content: "\e116";
+}
+
+/* line 159, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-folder-close:before {
+  content: "\e117";
+}
+
+/* line 160, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-folder-open:before {
+  content: "\e118";
+}
+
+/* line 161, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-resize-vertical:before {
+  content: "\e119";
+}
+
+/* line 162, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-resize-horizontal:before {
+  content: "\e120";
+}
+
+/* line 163, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-hdd:before {
+  content: "\e121";
+}
+
+/* line 164, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-bullhorn:before {
+  content: "\e122";
+}
+
+/* line 165, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-bell:before {
+  content: "\e123";
+}
+
+/* line 166, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-certificate:before {
+  content: "\e124";
+}
+
+/* line 167, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-thumbs-up:before {
+  content: "\e125";
+}
+
+/* line 168, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-thumbs-down:before {
+  content: "\e126";
+}
+
+/* line 169, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-hand-right:before {
+  content: "\e127";
+}
+
+/* line 170, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-hand-left:before {
+  content: "\e128";
+}
+
+/* line 171, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-hand-up:before {
+  content: "\e129";
+}
+
+/* line 172, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-hand-down:before {
+  content: "\e130";
+}
+
+/* line 173, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-circle-arrow-right:before {
+  content: "\e131";
+}
+
+/* line 174, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-circle-arrow-left:before {
+  content: "\e132";
+}
+
+/* line 175, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-circle-arrow-up:before {
+  content: "\e133";
+}
+
+/* line 176, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-circle-arrow-down:before {
+  content: "\e134";
+}
+
+/* line 177, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-globe:before {
+  content: "\e135";
+}
+
+/* line 178, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-wrench:before {
+  content: "\e136";
+}
+
+/* line 179, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-tasks:before {
+  content: "\e137";
+}
+
+/* line 180, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-filter:before {
+  content: "\e138";
+}
+
+/* line 181, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-briefcase:before {
+  content: "\e139";
+}
+
+/* line 182, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-fullscreen:before {
+  content: "\e140";
+}
+
+/* line 183, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-dashboard:before {
+  content: "\e141";
+}
+
+/* line 184, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-paperclip:before {
+  content: "\e142";
+}
+
+/* line 185, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-heart-empty:before {
+  content: "\e143";
+}
+
+/* line 186, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-link:before {
+  content: "\e144";
+}
+
+/* line 187, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-phone:before {
+  content: "\e145";
+}
+
+/* line 188, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-pushpin:before {
+  content: "\e146";
+}
+
+/* line 189, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-euro:before {
+  content: "\20ac";
+}
+
+/* line 190, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-usd:before {
+  content: "\e148";
+}
+
+/* line 191, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-gbp:before {
+  content: "\e149";
+}
+
+/* line 192, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-sort:before {
+  content: "\e150";
+}
+
+/* line 193, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-sort-by-alphabet:before {
+  content: "\e151";
+}
+
+/* line 194, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-sort-by-alphabet-alt:before {
+  content: "\e152";
+}
+
+/* line 195, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-sort-by-order:before {
+  content: "\e153";
+}
+
+/* line 196, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-sort-by-order-alt:before {
+  content: "\e154";
+}
+
+/* line 197, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-sort-by-attributes:before {
+  content: "\e155";
+}
+
+/* line 198, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-sort-by-attributes-alt:before {
+  content: "\e156";
+}
+
+/* line 199, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-unchecked:before {
+  content: "\e157";
+}
+
+/* line 200, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-expand:before {
+  content: "\e158";
+}
+
+/* line 201, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-collapse:before {
+  content: "\e159";
+}
+
+/* line 202, /home/bkstorage/.rvm/gems/ruby-2.0.0-p451/gems/bootstrap-glyphicons-0.0.1/app/assets/stylesheets/bootstrap/glyphicons.scss */
+.glyphicon-collapse-top:before {
+  content: "\e160";
+}
+
+/* line 8, /home/bkstorage/elrails/app/assets/stylesheets/main.css.scss */
+.page-wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* line 13, /home/bkstorage/elrails/app/assets/stylesheets/main.css.scss */
+header {
+  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+  padding-top: 15px;
+  margin-bottom: 5px;
+}
+
+/* line 21, /home/bkstorage/elrails/app/assets/stylesheets/main.css.scss */
+div.logo-holder {
+  float: left;
+}
+/* line 23, /home/bkstorage/elrails/app/assets/stylesheets/main.css.scss */
+div.logo-holder .logo > a {
+  text-decoration: none;
+}
+/* line 26, /home/bkstorage/elrails/app/assets/stylesheets/main.css.scss */
+div.logo-holder .logo > a > img {
+  vertical-align: middle;
+  height: 60px;
+}
+/* line 30, /home/bkstorage/elrails/app/assets/stylesheets/main.css.scss */
+div.logo-holder .logo > a > span {
+  color: #0d5eab;
+  font-weight: bold;
+  font-size: 26px;
+  font-family: "Open Sans","lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+  margin-left: 10px;
+}
+
+/* line 39, /home/bkstorage/elrails/app/assets/stylesheets/main.css.scss */
+ul.top-nav {
+  float: right;
+  list-style: none;
+  margin-top: 15px;
+  font-family: none;
+}
+/* line 44, /home/bkstorage/elrails/app/assets/stylesheets/main.css.scss */
+ul.top-nav li.nav-link {
+  padding-right: 20px;
+  display: inline-block;
+  color: #2895f1;
+}
+/* line 48, /home/bkstorage/elrails/app/assets/stylesheets/main.css.scss */
+ul.top-nav li.nav-link a {
+  color: #2895f1;
+  text-decoration: none;
+}
+/* line 51, /home/bkstorage/elrails/app/assets/stylesheets/main.css.scss */
+ul.top-nav li.nav-link a span {
+  font-size: 19px;
+}
+/* line 54, /home/bkstorage/elrails/app/assets/stylesheets/main.css.scss */
+ul.top-nav li.nav-link a:hover {
+  text-decoration: underline;
+}
+
+/* line 62, /home/bkstorage/elrails/app/assets/stylesheets/main.css.scss */
+#new-container input.form-control {
+  display: inline-block;
+  width: 200;
+  margin-right: 0px;
+  height: 30px;
+  padding: 1px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+/* line 79, /home/bkstorage/elrails/app/assets/stylesheets/main.css.scss */
+#new-container input.form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+/* line 86, /home/bkstorage/elrails/app/assets/stylesheets/main.css.scss */
+#new-container .btn {
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+/* line 101, /home/bkstorage/elrails/app/assets/stylesheets/main.css.scss */
+#new-container .btn:hover {
+  color: #333;
+  background-color: #ebebeb;
+  border-color: #adadad;
+}
+
+/* line 109, /home/bkstorage/elrails/app/assets/stylesheets/main.css.scss */
+.locale-changer {
+  width: 98%;
+  text-align: right;
+  color: #aeaeae;
+  position: absolute;
+  top: 3px;
+}
+/* line 115, /home/bkstorage/elrails/app/assets/stylesheets/main.css.scss */
+.locale-changer span {
+  margin-right: 3px;
+}

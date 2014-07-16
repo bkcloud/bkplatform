@@ -1,0 +1,54 @@
+#! /bin/bash
+#
+# mysql-cluster       Bring up/down cluster
+#
+# chkconfig: 2345 26 70
+# description: Activates/Deactivates management node  \
+#              start at boot time.
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+cd /usr/local/mysql-cluster
+
+# See how we were called.
+case "$1" in
+  start)
+        echo "Starting cluster"
+        python /script/rolling_restart.py
+        echo "Started"
+        ;;
+  shutdown)
+        echo "Shutting down cluster"
+	# python /script/shutdown_mysql.py
+        /usr/local/mysql-cluster/bin/ndb_mgm -e shutdown
+        rc=$?
+        echo "DOWN"
+        ;;
+  initial)
+        echo "Initial cluster"
+        cd /usr/local/mysql-cluster
+        /usr/local/mysql-cluster/bin/ndb_mgmd --initial --configdir=/var/lib/mysql-mgmd-config-cache --config-file=/var/lib/mysql-mgmd-data/config.ini
+        echo "Started"
+	;;
+  status)
+        ps cax | grep ndb_mgmd > /dev/null
+        if [ $? -eq 0 ]; then
+          /usr/local/mysql-cluster/bin/ndb_mgm -e show
+        else
+          echo "Mysql Cluster is not running."
+        fi
+        rc=$?
+        ;;
+  restart|reload|force-reload)
+        # $0 stop
+        $0 start
+        rc=$?
+        ;;
+  *)
+        echo $"Usage: $0 {start|shutdown|status|restart|reload|force-reload}"
+        exit 2
+esac
+
+exit $rc

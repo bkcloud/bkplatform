@@ -1,0 +1,35 @@
+
+<%= stylesheet_link_tag  'custom' %>
+
+
+<div class="install-box">
+  <div class="row">
+    <div class="install-quote col-md-6">
+      <div class="quote">
+        Download BK SYNC
+        <span>
+          Your stuff, everwhere
+        </span>
+      </div>
+      <div class="install-link">
+        <button class="btn btn-primary btn-block">
+          <%= t('download_btn') %>
+        </button>
+      </div>
+
+    </div>
+
+    <div class="highlight col-md-6">
+      <pre>
+        <code class="bash">
+          <span> $ wget http://localhost:8000/bksync/install.sh </span>
+          <span> $ sudo source install.sh </span>
+          <span> $ sudo service bksyncd start </span>
+        </code>
+
+      </pre>
+
+    </div>
+  </div>
+
+</div>

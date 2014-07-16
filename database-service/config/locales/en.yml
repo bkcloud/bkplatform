@@ -1,0 +1,144 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  login: "Login"
+  signup: "Signup"
+  logout: "Logout"
+  applications: "applications"
+  processing: "processing"
+  connect:
+    title: "Create"
+    adapter: "Adapter"
+    connection_name: "Connection Name"
+    connection_name_placeholder: "URL Friendly Connection Name"
+    host: "Host"
+    host_placeholder: "127.0.0.1"
+    username: "Username"
+    username_placeholder: "username"
+    database: "Database"
+    database_placeholder: "database"
+    password: "Password"
+    password_placeholder: "password"
+    socket: "Socket"
+    socket_placeholder: "socket"
+  database:
+    structure: 'Structure'
+    content: 'Content'
+  adapters:
+    unsupported_adapter: "Unsupported adapter '%{adapter}'"
+    mongodb:
+      title: "MongoDB"
+      result:
+        one: "document"
+        other: "documents"
+      collection:
+        one: "collection"
+        other: "collections"
+    rethinkdb:
+      title: "RethinkDB"
+      result:
+        one: "document"
+        other: "documents"
+      collection:
+        one: "collection"
+        other: "collections"
+    mysql:
+      title: "MySQL"
+      result:
+        one: "record"
+        other: "records"
+      collection:
+        one: "table"
+        other: "tables"
+    mysql2:
+      title: "MySQL"
+      result:
+        one: "record"
+        other: "records"
+      collection:
+        one: "table"
+        other: "tables"
+    postgresql:
+      title: "PostgreSQL"
+      result:
+        one: "record"
+        other: "records"
+      collection:
+        one: "table"
+        other: "tables"
+    sqlite:
+      title: "SQLite"
+      result:
+        one: "record"
+        other: "records"
+      collection:
+        one: "table"
+        other: "tables"
+    sqlite2:
+      title: "SQLite"
+      result:
+        one: "record"
+        other: "records"
+      collection:
+        one: "table"
+        other: "tables"
+    sqlite3:
+      title: "SQLite"
+      result:
+        one: "record"
+        other: "records"
+      collection:
+        one: "table"
+        other: "tables"
+
+  flash:
+    notice:
+      invalid_adapter: "The %{adapter} database configuration for %{app} could not be loaded."
+
+  modals:
+    cancel: "Cancel"
+    ok: "Ok"
+    create_table_placeholder: "Tên bảng"
+    no_of_field: "Số cột"
+    coming_soon: "Coming Soon"
+    create_table: "Create Table"
+    not_supported: "This feature is not yet supported."
+    error:
+      title: "An error has occurred"
+    database:
+      info: "Thông tin cở sở dữ liệu"
+      confirm_delete:
+        title: "Deletion Confirmation"
+        body: "Delete item (%{primary_key} = %{id})? This operation cannot be undone."
+        dropdb: "Drop database (%{database_name})? This operation cannot be undone."
+        droptable: "Drop table (%{table_name})? This operation cannot be undone."
+        ok: "Delete"
+        cancel: "Cancel"
+    connection_name:
+      invalid:
+        title: "Invalid Connection Name"
+        body: "The connection name cannot be blank"
+    settings:
+      title: "Settings"
+      close: "Cancel"
+      apply: "Apply"
+      form:
+        limit:
+          label: "Limit results to"
+
+  pages:
+    error:
+      title: "Something went wrong"
+      try_again: 'Try again'
+    help:
+      user_manual: "User Manual"
+      issue_tracker: "Issue Tracker"
+    unauthorized:
+      title: "Incomplete Configuration"
+      message: "Labrador requires HTTP Basic Authentication environment variables to protect your development databases from unauthorized access."
+      explanation: "Add your <code>ENV['LABRADOR_USER']</code> and <code>ENV['LABRADOR_PASS']</code> credentials to the file <br/><code>%{path}</code><br/>and restart your server."
+
+  status:
+    requesting: "requesting %{collection}"
+    showing: "showing %{count} %{results}"

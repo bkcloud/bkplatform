@@ -1,0 +1,9 @@
+development:
+  url: "http://192.168.50.13:3000"
+  portal_url: "http://192.168.50.14"
+  cas_url: "http://192.168.50.14/cas"
+
+production:
+  url: "http://192.168.50.13"
+  portal_url: "http://192.168.50.14"
+  cas_url: "http://192.168.50.14/cas"
