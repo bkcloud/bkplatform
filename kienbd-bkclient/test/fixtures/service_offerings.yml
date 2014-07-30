@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cpu: 1
+  speed: 1
+  ram_size: MyString
+  nw_rate: 1
+  mc_rate: 1
+  ha_enabled: 1
+
+two:
+  cpu: 1
+  speed: 1
+  ram_size: MyString
+  nw_rate: 1
+  mc_rate: 1
+  ha_enabled: 1

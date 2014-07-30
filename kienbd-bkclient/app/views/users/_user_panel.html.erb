@@ -1,0 +1,21 @@
+<!--
+<div id="logo-wrapper">
+    <%= link_to '', root_path, id: "logo" %>
+  </div>
+  -->
+<div id="current_user" class="tooltips" >
+  <div style="display: inline-block;">
+    <span style="font-size: 20px;padding-right: 10px"><%=t('hello') %>, <strong style="color: #3a87ad"><%= current_user.username %></strong></span>
+  </div>
+  <a href="<%= edit_user_registration_path %>" id="user-settings" rel="tooltip" data-toggle="tooltip" data-placement="bottom" title data-original-title="<%=t('setting') %>">
+    <span class="icon"></span>
+  </a>
+  <a href="/logout" rel="tooltip" id="user-signout" data-toogle="tooltip" data-placement="bottom" title data-original-title="<%=t('sign_out') %>">
+    <span class="icon"></span>
+  </a>
+</div>
+
+
+<script type="text/javascript">
+  $("[rel=tooltip]").tooltip();
+</script>

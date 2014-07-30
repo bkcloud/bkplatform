@@ -1,0 +1,31 @@
+<%= provide(:background_color,'#398439') %>
+<div class="registration heading text-center">
+  <%= image_tag "bkloud.png" %>
+</div>
+<div class="signin_box">
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+    <div>
+      <%= f.text_field :username, :autofocus => true, :class => "form-control", :placeholder => "Enter Username" %>
+      <br/>
+    </div>
+
+    <div>
+      <%= f.password_field :password, :class => "form-control", :placeholder => "Password" %>
+      <br/>
+    </div>
+
+    <div><%= f.submit "Sign in", :class => "btn btn-success pull-right" %></div>
+  <% end %>
+</div>
+
+<div class="user-switcher">
+  <a href="/" data-toggle="tooltip" data-placement="top" title rel="tooltip" data-original-title="Login User">
+    <i class="glyphicon glyphicon-user"></i>
+  </a>
+</div>
+
+
+<script type="text/javascript">
+  $("[rel=tooltip]").tooltip();
+</script>

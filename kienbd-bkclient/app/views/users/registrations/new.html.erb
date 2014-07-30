@@ -1,0 +1,5 @@
+<% if session[:redirect_url].nil? %>
+<%= render partial: "inst_signup" %>
+<% else %>
+<%= render partial: "sso_signup" %>
+<% end %>

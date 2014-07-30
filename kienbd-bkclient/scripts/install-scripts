@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+# Format: ["github repo"[, "filetype"][, "branch/tag/commit sha"]]
+bundles = [
+  ["kanaka/websockify"],
+]
+
+require 'fileutils'
+require 'open-uri'
+
+bundle_dir = File.join(".")
+
+bundles.each do |b|
+  FileUtils.cd(bundle_dir)
+
+  repo, ft, co = b
+  dir = repo.split('/').last
+
+  if File.directory? dir
+    puts " Updating #{dir}"
+    FileUtils.cd(dir)
+    `git fetch origin && git reset --hard origin/master`
+  else
+    puts " Installing #{dir}"
+    `git clone https://github.com/#{repo}.git`
+  end
+
+  `git checkout #{co}` if co
+end
+

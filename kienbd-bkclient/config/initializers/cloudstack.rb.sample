@@ -1,0 +1,8 @@
+Bkclient::Application.config.cloudstack = {
+  apiKey: "your_api_key",
+  secretKey: "your_secret_key",
+  apiURL: "http://192.168.50.11:8080/client/api",
+  ip: "192.168.50.11",
+  vnc2spice_user: "bkscript",
+  vnc2spice_passwd: "bietlamchi?><!"
+}

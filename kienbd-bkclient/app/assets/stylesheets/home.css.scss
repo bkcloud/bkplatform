@@ -1,0 +1,198 @@
+.tabbable.service_offering_selection {
+  .service-offering-choice {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    display: inline;
+    float: left;
+    background-color: #f5f5f5;
+    color: #666;
+    cursor: pointer;
+    margin: 15px;
+    padding: 21px 20px;
+    text-align: center;
+    width: 135px;
+    font-size: 16px;
+    list-style: none;
+    text-transform: uppercase;
+    &.selected {
+      background-color: #398bce;
+      color: #fff;
+    }
+  }
+  .carousel-control {
+    color: black !important;
+    background: none !important;
+    width: 1% !important;
+  }
+}
+
+#template_selection {
+  display: inline-table;
+  .distro {
+    display: inline;
+    float: left;
+    margin: 30px 15px;
+    text-align: center;
+    color: #c2c2c2;
+    &.selected {
+      color: #333;
+      & .icon {
+        background-color: #fff !important;
+        border-color: #c2c2c2;
+      }
+    }
+    .icon {
+      -webkit-border-radius: 51%;
+      -moz-border-radius: 51%;
+      -ms-border-radius: 51%;
+      -o-border-radius: 51%;
+      border-radius: 51%;
+      background-color: #eee;
+      background-repeat: no-repeat;
+      background-position: center center;
+      border: 5px solid #eee;
+      height: 84px;
+      margin: 10px auto;
+      width: 84px;
+    }
+    &.ubuntu .icon {
+      background-image: url(OS/ubuntu-grey.png);
+    }
+    &.ubuntu.selected .icon {
+      background-image: url(OS/ubuntu.png);
+    }
+    &.fedora .icon {
+      background-image: url(OS/fedora-grey.png);
+    }
+    &.fedora.selected .icon {
+      background-image: url(OS/fedora.png);
+    }
+    &.windows .icon {
+      background-image: url(OS/windows-grey.png);
+    }
+    &.windows.selected .icon {
+      background-image: url(OS/windows.png);
+    }
+    &.centos .icon {
+      background-image: url(OS/centos-grey.png);
+    }
+    &.centos.selected .icon {
+      background-image: url(OS/centos.png);
+    }
+    &.debian .icon {
+      background-image: url(OS/debian-grey.png);
+    }
+    &.debian.selected .icon {
+      background-image: url(OS/debian.png);
+    }
+
+  }
+}
+
+
+.instances-holder {
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #fff;
+  border-width: 1px;
+  border-color: #ddd;
+  border-radius: 4px 4px 0 0;
+  border-style: solid;
+  box-shadow: none;
+  width: 600px;
+  margin: 0 auto;
+  padding: 45px 15px 15px;
+  position: relative;
+  table {
+    margin-bottom: 0px;
+    td {
+      vertical-align: middle !important;
+    }
+  }
+  &:after {
+    content: "List Instances";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #bbb;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+
+.admin-control-header {
+  img {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin-bottom: 5px;
+  }
+  h1 {
+    display: inline-block;
+  }
+}
+
+
+.back-holder {
+  /* width: 60px; */
+  font-size: 75px;
+  /* top: 0; */
+  opacity: 0.5;
+  /* background-color: lightblue; */
+  transition: 0.2s;
+  /* height: 75px; */
+  position: absolute;
+  top: 40%;
+  & > a {
+    line-height: 75px;
+  }
+  & > span {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: white;
+  }
+}
+.back-holder:hover {
+  opacity: 1;
+}
+.back-holder .glyphicon {
+  /* height: 75px; */
+  /* position: absolute; */
+  /* top: 40%; */
+  color: white;
+}
+
+.back-holder .reg-back {
+  color: rgb(80, 162, 243);
+}
+
+.user-switcher {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 60px;
+  color: white;
+  opacity: 0.5;
+  a {
+    display: inline-block;
+  }
+}
+.user-switcher:hover {
+  opacity: 1;
+}
+
+
+.sso-signup-form {
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 60px;
+
+}

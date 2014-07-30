@@ -1,0 +1,4 @@
+<a class="distro <%= getOSName(template.name) %> <%= defined?(selected) ? 'selected' : '' %>" href="#<%= template.id %>" onclick="$('#template_selection .distro').removeClass('selected');$(this).addClass('selected');$('#inputTemplateId').val(<%= template.id %>)">
+  <div class="icon"></div><%= template.ostypename %>
+</a>
+

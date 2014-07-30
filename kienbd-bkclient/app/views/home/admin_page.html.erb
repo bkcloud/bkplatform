@@ -1,0 +1,67 @@
+<div id="current_user" class="admin fix-bottom">
+  <div class="btn-group dropup">
+    <a class="dropdown-toggle" id="user-settings" data-toggle="dropdown">
+      <span class="icon"></span>
+    </a>
+    <ul class="dropdown-menu admin-settings pull-right">
+      <li>
+        <a href="/sync" class="sync-data"><span class="glyphicon glyphicon-cloud-download"></span></a>
+      </li>
+    </ul>
+  </div>
+  <a href="<%= destroy_admin_session_path %>" data-method="delete" id="user-signout">
+    <span class="icon"></span>
+  </a>
+</div>
+
+
+<div style="width: 80%;margin: 0 auto;">
+  <legend class="admin-control-header">
+    <img src="/assets/cloud-desktop.jpg"/>
+    <h1><%=t('instances') %></h1>
+  </legend>
+
+  <% unless flash[:success].nil?  %>
+    <div class="alert alert-success sync-alert">
+      <%= flash[:success] %>
+    </div>
+  <% end %>
+
+
+  <div class="instances-holder">
+    <div class="admin-inst-btn-group ">
+      <a href="/admin_page"><button class="btn btn-default btn-sm"><span class="glyphicon glyphicon-refresh"></span></button></a>
+    </div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>User</th>
+          <th><%=t('instance_name') %></th>
+          <th><%=t('status') %></th>
+          <th colspan="2" class="text-center"><%=t('actions') %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @instances.each do |inst| %>
+          <tr>
+            <td><%= inst.user.username %></td>
+            <td><%= inst.name %></td>
+            <td><%= inst.state %></td>
+            <td class="text-center">
+              <% if inst.is_pending? %>
+                  <a href="<%= approve_instance_path(inst.id) %>" data-remote="true" id="aprv-btn-<%= inst.id %>" class="btn btn-primary btn-small" ><%=t('approve') %></a>
+              <% elsif inst.is_approving? %>
+                <button class="btn btn-warning btn-small disabled"><%=t('approving') %></button>
+              <% elsif !inst.hostname.nil?%>
+                <button class="btn btn-info btn-small disabled"><%=t('approved') %></button>
+              <% end %>
+              <% if inst.isCreated %>
+                  <a href="<%= send_mail_instance_path(inst.id) %>" data-remote="true" class="btn btn-success btn-small" onclick="$(this).addClass('disabled').html('Mail sent')"><%=t('send_mail') %></a>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

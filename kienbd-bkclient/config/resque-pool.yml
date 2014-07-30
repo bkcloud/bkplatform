@@ -1,0 +1,8 @@
+staging:
+  "send_mail": 1
+  "default": 1
+production:
+  "default": 3
+
+development:
+  "default": 1

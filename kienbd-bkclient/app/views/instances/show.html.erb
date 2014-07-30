@@ -1,0 +1,73 @@
+<div id="container">
+  <div id="content">
+    <div class="contents">
+      <div class="rightcontent">
+        <header>
+          <h1><%=t('your_cloud_desktop') %></h1>
+        </header>
+        <table>
+          <tr>
+            <td><span class="col-lg-12 control-label h3 lighten-font"><%=t('instance_name') %></span></td>
+            <td><span class="col-lg-9 h3"><%= @instance.name %></span></td>
+        </tr>
+        <tr>
+          <td><span class="col-lg-12 control-label h3 lighten-font">Hostname</span></td>
+          <td><span class="col-lg-9 h3"><%= @instance.hostname %></span></td>
+        </tr>
+        <tr>
+          <td><span class="col-lg-12 control-label h3 lighten-font">Port</span></td>
+          <td><span class="col-lg-9 h3"><%= @instance.port %></span></td>
+        </tr>
+        <tr>
+          <td><span class="col-lg-12 control-label h3 lighten-font"><%=t('console') %></span></td>
+          <td><span class="col-lg-9 h3"><a href="<%=viewSpiceWebSock_instance_path(@instance.id)%>" class="btn btn-default">Console</a></span></td>
+        </tr>
+        <tr>
+          <td><span class="col-lg-12 control-label h3 lighten-font"><%=t('state') %></span></td>
+          <td>
+            <span class="col-lg-4 h3 inst-state <%= @instance.state %>"><%= @instance.state %></span>
+            <a data-html="true" data-placement="bottom" data-content="<%= render "shared/inst_state_btns",inst: @instance %>" data-trigger="hover" rel="popover" href="#">
+              <button class="btn btn-sm btn-inst-state"><span class="glyphicon glyphicon-cog"></span></button>
+            </a>
+          </td>
+        </tr>
+          <% service_offering = @instance.service_offering %>
+        <tr>
+          <td style='vertical-align: top'><span class="col-lg-12 control-label h3 lighten-font"><%=t('computing') %></span></td>
+          <td>
+            <span class="col-lg-9 h3"><%= service_offering.cpunumber %> Chip</span>
+            <span class="col-lg-9 h3"><%= service_offering.cpuspeed %> Mhz</span>
+            <span class="col-lg-9 h3"><%= service_offering.memory %> MB</span>
+          </td>
+        </tr>
+        <tr>
+          <td><span class="col-lg-12 control-label h3 lighten-font"><%=t('offer_ha') %></span></td>
+          <td><span class="col-lg-9 h3"><%= service_offering.offerha %> </span></td>
+        </tr>
+        <tr>
+          <td><span class="col-lg-12 control-label h3 lighten-font"><%=t('disk') %></span></td>
+          <td><span class="col-lg-9 h3"><%= @instance.disk_offering.disksize + " GB" unless @instance.disk_offering.nil?%></span></td>
+        </tr>
+	<!--
+        <tr>
+          <td><span class="col-lg-12 control-label h3 lighten-font">Template</span></td>
+          <td><span class="col-lg-9 h3"><%# @instance.template.name %></span></td>
+        </tr>
+	-->
+      </table>
+      <div class="inst-destroy">
+        <a href="<%= remove_instance_path(@instance) %>" data-confirm="Are you sure?" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-trash" style="margin-right: 3px"></span><%=t('destroy_btn') %></a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<%= render 'users/user_panel' %>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $("[rel=popover]").clickover();
+});
+</script>

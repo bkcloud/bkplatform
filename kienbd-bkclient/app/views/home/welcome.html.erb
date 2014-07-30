@@ -1,0 +1,61 @@
+<%= provide(:background_color,'rgb(47,161,234)') %>
+<div id="welcome">
+  <div id="logo-wrapper">
+    <%= link_to '/' do %>
+      <%= image_tag 'logo-welcome.png' %>
+    <% end %>
+  </div>
+
+  <div style="text-align: center;">
+    <div class="getting-started">
+      <% if current_user.nil? %>
+      <a href="<%= new_user_registration_path %>">
+        <button type="button" class="btn btn-success btn-lg btn-block"><%= t('get_started') %>
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </button>
+      </a>
+      <% elsif current_user.instance.nil? %>
+      <a href="<%= new_instance_path %>">
+        <button type="button" class="btn btn-warning btn-lg btn-block"><%= t('continue_registration') %>
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </button>
+      </a>
+      <% else %>
+      <a href="<%= instance_path(current_user.instance.id) %>">
+        <button type="button" class="btn btn-success btn-lg btn-block"><%= t('goto_instance') %>
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </button>
+      </a>
+      <% end %>
+    </div>
+    <% if current_user.nil? %>
+      <div class="login-now">
+      <a href="<%= CASClient::Frameworks::Rails::Filter.login_url(controller)  %>">
+	<button type="button" class="btn btn-default btn-lg btn-block"><%=t('sign_in') %></button>
+     </a>
+      </div>
+    <% else %>
+      <div class="login-now">
+	<a href="/logout">
+	<button type="button" class="btn btn-default btn-lg btn-block">
+	<%= t('sign_out') %>
+	</button>
+	</a>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="user-switcher">
+  <a href="http://admin.bkcloud.net:8080/client" data-toggle="tooltip" data-placement="top" title rel="tooltip" data-original-title="Dashboard Admin" target="_blank">
+    <i class="glyphicon glyphicon-user"></i>
+  </a>
+  <a href="/admins/sign_in" data-toggle="tooltip" data-placement="top" title rel="tooltip" data-original-title="Login Admin">
+    <i class="glyphicon glyphicon-user"></i>
+  </a>
+</div>
+
+
+<script type="text/javascript">
+  $("[rel=tooltip]").tooltip();
+</script>

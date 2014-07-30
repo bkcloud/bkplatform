@@ -1,0 +1,36 @@
+<aside id="sidebar">
+  <div id="logo-wrapper">
+    <%= link_to '', root_path, id: "logo" %>
+  </div>
+  <a href="/vmcreate" class="btn btn-success btn-lg" style="font-weight: 200; display:block; width: 120px; margin: 0 auto;">CREATE</a>
+  <ul class="nav nav-pills nav-stacked">
+    <li class="active">
+      <%= link_to 'Droplets', root_path %>
+    </li>
+    <li>
+      <%= link_to 'Item 1', root_path %>
+    </li>
+    <li>
+      <%= link_to 'SSH Keys', root_path %>
+    </li>
+    <li>
+      <%= link_to 'Item 1', root_path %>
+    </li>
+    <li>
+      <%= link_to 'Item 1', root_path %>
+    </li>
+    <li>
+      <%= link_to 'Item 1', root_path %>
+    </li>
+  </ul>
+
+  <div id="current_user">
+    <a href="<%= edit_user_registration_path %>" id="user-settings">
+      <span class="icon">Settings</span>
+    </a>
+    <a href="<%= destroy_user_session_path %>" data-method="delete" id="user-signout">
+      <span class="icon">Signout</span>
+    </a>
+  </div>
+
+</aside>

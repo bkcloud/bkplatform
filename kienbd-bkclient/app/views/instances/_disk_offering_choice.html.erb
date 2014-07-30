@@ -1,0 +1,6 @@
+<% if disk_offering.disksize != "0" %>
+<label class="btn btn-default">
+  <%= f.radio_button :disk_offering_id, disk_offering.id %>
+  <%= disk_offering.disksize %> GB
+</label>
+<% end %>

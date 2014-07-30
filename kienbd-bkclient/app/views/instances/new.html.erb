@@ -1,0 +1,106 @@
+
+<div class="back-holder ">
+  <a href="/welcome">
+    <i class="glyphicon glyphicon-chevron-left reg-back"></i>
+  </a>
+  <span>Back</span>
+</div>
+
+<div class="registration-forms-holder">
+  <div class="reg-form instance-reg-form">
+    <div id="container">
+      <div id="content">
+        <div class="contents">
+          <div class="rightcontent">
+            <div class="alert alert-info fade in" style="font-size: 20px;line-height: 21px">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <strong><%= t('user_create_successfully') %></strong>
+            </div>
+            <%= form_for Instance.new, :class => 'form-horizontal' do |f| %>
+              <%= f.hidden_field :service_offering_id, :required => true, :id => "inputServiceOfferingId" %>
+              <%#= f.hidden_field :disk_offering_id, :required=> true, :id => "inputDiskOfferingId" %>
+              <%= f.hidden_field :template_id, :required=> true, :id => "inputTemplateId" %>
+              <h3>VM Name</h3>
+              <div class="form-group">
+                <%= f.label :displayname,"#{t('display_name')}", :class => "col-lg-3 control-label h3 lighten-font" %>
+                <div class="col-lg-9">
+                  <%= f.text_field :displayname, :autofocus => true, :required => true, :class => "text-field-default", :id => "inputName", :placeholder => "", :partern => '[a-zA-Z0-9-]+' %>
+                </div>
+              </div>
+              <h3><%=t('select') %> CPU</h3>
+              <div class="tabbable service_offering_selection">
+                <div id="carousel-example-generic" class="carousel slide" onload="$('.carousel').carousel('pause')">
+                  <!--
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                  </ol>
+                  -->
+
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" style="width: 680px; margin: 0 auto;">
+                    <% l = @serviceOfferings.length %>
+                    <% n = (l-1)/4 + 1 %>
+                    <% i = 0 %>
+                    <% while i < n %>
+                      <% if i == 0 && i < n %>
+                        <div class="item active">
+                          <div class="item-contents">
+                            <% @serviceOfferings[i*4..i*4+3].each do |e| %>
+                              <%= render :partial => 'service_offering_choice', :locals => { service_offering: e } %>
+                            <% end %>
+                          </div>
+                        </div>
+                      <% elsif i < n %>
+                        <div class="item">
+                          <div class="item-contents">
+                            <% @serviceOfferings[i*4..i*4+3].each do |e| %>
+                              <%= render :partial => 'service_offering_choice', :locals => { service_offering: e } %>
+                            <% end %>
+                          </div>
+                        </div>
+                      <% end %>
+                    <% i += 1%>
+                    <% end %>
+                  </div>
+
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="icon-prev glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="icon-next glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                </div>
+              </div>
+
+              <h3><%=t('select') %> Disk</h3>
+              <div class="btn-group" data-toggle="buttons">
+                <%= render :partial => 'disk_offering_choice_none', :locals => { f: f } %>
+                <% @diskOfferings.each do |e| %>
+                  <%= render :partial => 'disk_offering_choice', :locals => { f: f, disk_offering: e } %>
+                <% end %>
+              </div>
+
+              <h3><%=t('select') %> Image</h3>
+              <div id="template_selection">
+                <% @templates.each do |e| %>
+                  <%= render :partial => 'template_choice', :locals => { template: e } %>
+                <% end %>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-19">
+                  <%= f.submit "#{t('request_btn')}", :class => 'btn btn-primary' %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'users/user_panel' %>
+<%= render partial: "shared/progress_bar",locals: {prg: 2} %>
+

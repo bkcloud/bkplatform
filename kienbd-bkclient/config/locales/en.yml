@@ -1,0 +1,70 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  bkclient: "BKClient"
+  bkstorage: "BKStorage"
+  bkdatabase: "BKDatabase"
+  get_started: "Get Started"
+  continue_registration: "Continue Registration"
+  goto_instance: "View Instance"
+  sign_in: "Login"
+  sign_out: "Signout"
+  sign_up: "Signup"
+
+  create_user: "Create User"
+  sign_up_btn: "Signup"
+  user_create_successfully: "Congratulation You've signed up successfully.Please create a new instance !"
+
+
+  create_instance: "Create Instance"
+  display_name: "Display name"
+  select: "Select"
+  request_btn: "Request"
+
+
+  confirmation: "Confirmation"
+  finish_registration: "You have finished the registration"
+  an_email: "An Email will be sent to"
+  soon: "soon"
+  view_instance_here: "View your instance"
+  here: "here"
+
+  setting: "Setting"
+  phone: "Phone"
+  password: "Password"
+  password_confirmation: "Password Confirmation"
+  deactive_my_account: "Deactive my account"
+  unhappy: "unhappy"
+  deactive_btn: "Deactive"
+
+  instances: "Instances"
+  instance: "Instance"
+  instance_name: "Instance Name"
+  status: "Status"
+  actions: "Actions"
+  approve: "Approve"
+  approving: "Approving"
+  approved: "Approved"
+  send_mail: "Send Mail"
+  synchronization_finished: "Synchronization Finished !"
+  synchronization_failed: "Synchronization Failed !"
+

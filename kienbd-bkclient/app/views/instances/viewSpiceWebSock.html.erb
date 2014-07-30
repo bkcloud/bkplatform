@@ -1,0 +1,90 @@
+<script type="text/javascript">
+  var host = "<%= @host %>", port = <%= @port %>;
+  var password = "bkcloud@123";
+  var sc;
+
+  function spice_error(e)
+  {
+    disconnect();
+  }
+
+  // only support chrome and firefox
+  function fullscreen(e)
+  {
+    var el = document.getElementById('spice-area');
+
+    if(el.webkitRequestFullScreen) {
+        el.webkitRequestFullScreen();
+    }
+    else {
+        el.mozRequestFullScreen();
+    }
+
+    console.log('fullscreen!');
+
+  }
+
+  function activeFullscreen(e)
+  {
+    document.getElementById('spicefull-btn').disabled = false;
+  }
+
+  function connect()
+  {
+    var scheme = "ws://", uri;
+
+    if ((!host) || (!port)) {
+      console.log("must set host and port");
+      return;
+    }
+
+    if (sc) {
+      sc.stop();
+    }
+
+    uri = scheme + host + ":" + port;
+
+    // document.getElementById('connectButton').innerHTML = "Stop";
+    // document.getElementById('connectButton').onclick = disconnect;
+
+    try
+    {
+      sc = new SpiceMainConn({uri: uri, screen_id: "spice-screen", dump_id: "debug-div",
+                             message_id: "message-div", password: password, onerror: spice_error, onsuccess: activeFullscreen, });
+    }
+    catch (e)
+    {
+      alert(e.toString());
+      disconnect();
+    }
+
+  }
+
+  function disconnect()
+  {
+    console.log(">> disconnect");
+    if (sc) {
+      sc.stop();
+    }
+    // document.getElementById('connectButton').innerHTML = "Start";
+    // document.getElementById('connectButton').onclick = connect;
+    console.log("<< disconnect");
+  }
+  connect();
+</script>
+
+<!--
+<div id="login">
+  <button id="connectButton" onclick="connect();">Start</button>
+</div>
+-->
+
+
+<div id="spice-area">
+  <div id="spice-screen" class="spice-screen"></div>
+</div>
+<button id="spicefull-btn" disabled="disabled" class="btn btn-default" onclick="fullscreen()">FULLSCREEN</button>
+<div id="message-div" class="spice-message" style="display: none"></div>
+<div id="debug-div" style="display: none">
+  If DUMPXXX is turned on, dumped images will go here
+</div>

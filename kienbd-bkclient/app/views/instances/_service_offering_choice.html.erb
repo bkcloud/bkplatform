@@ -1,0 +1,5 @@
+<div class="service-offering-choice <%= defined?(selected) ? 'selected' : '' %>" onclick="$(this).parentsUntil('.carousel-innner','.carousel-inner').find('.service-offering-choice').removeClass('selected'); $(this).addClass('selected');$('#inputServiceOfferingId').val(<%= service_offering.id %>)">
+  <span class="cpu"><%= service_offering.cpunumber %> Chip</span><br />
+  <span> <%= service_offering.cpuspeed %> Mhz</span><br />
+  <span class="memory"><%= service_offering.memory %> MB</span>
+</div>

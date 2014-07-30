@@ -1,0 +1,73 @@
+<div id="container">
+  <div id="content">
+    <div class="contents">
+      <div class="rightcontent">
+        <h2><%= t('edit_user') %></h2>
+
+        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form-horizontal', :role => 'form' }) do |f| %>
+          <%= devise_error_messages! %>
+
+          <div class='form-group'>
+            <%= f.label :email, :class => "col-lg-2 control-label" %>
+            <div class="col-lg-10">
+              <%#= f.email_field :email, :autofocus => true , :class => 'text-field-default'%>
+              <p class="form-control-static"><%= resource.email %></p>
+            </div>
+          </div>
+          <div class='form-group'>
+            <%= f.label :username,t('username'), :class => "col-lg-2 control-label" %>
+            <div class="col-lg-10">
+              <%#= f.email_field :email, :autofocus => true , :class => 'text-field-default'%>
+              <p class="form-control-static"><%= resource.username %></p>
+            </div>
+          </div>
+          <div class='form-group'>
+            <%= f.label :phone,t('phone'), :class => "col-lg-2 control-label" %>
+            <div class="col-lg-10">
+              <%= f.phone_field :phone, :autofocus => true , :class => 'text-field-default'%>
+            </div>
+          </div>
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+          <% end %>
+
+          <div class="form-group">
+            <%= f.label :password,t('password'), :class => "col-lg-2 control-label" %>
+            <div class="col-lg-10">
+              <%= f.password_field :password, :autocomplete => "off", :class => 'text-field-default' %>
+              <span class="help-block">(leave blank if you don't want to change it)</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password_confirmation,t('password_confirmation'), :class => "col-lg-2 control-label" %>
+            <div class="col-lg-10">
+              <%= f.password_field :password_confirmation, :class => 'text-field-default' %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :current_password,t('password_current'), :class => "col-lg-2 control-label" %>
+            <div class="col-lg-10">
+              <%= f.password_field :current_password, :class => 'text-field-default'%>
+              <span class="help-block">(we need your current password to confirm your changes)</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10">
+              <%= f.submit "#{t('update')}", :class => 'btn btn-default' %>
+            </div>
+          </div>
+        <% end %>
+
+        <h3><%=t('deactive_my_account') %></h3>
+
+        <p><%=t('unhappy') %>? <%= button_to "#{t('deactive_btn')}", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => "btn btn-danger" %></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<%= render 'users/user_panel' %>

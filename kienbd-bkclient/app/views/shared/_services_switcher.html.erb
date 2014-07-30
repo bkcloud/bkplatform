@@ -1,0 +1,55 @@
+
+<div id="switch-service-button">
+   <span class="switch-service-button glyphicon glyphicon-chevron-up"></span>
+</div>
+
+<div id="services-list" class="minimized">
+    <div class="service">
+    <%= link_to '/welcome' do %>
+      <%= image_tag 'cloud-desktop.jpg' %><br/>
+      <span>Virtual Desktop</span>
+    <% end %>
+    </div>
+    <div class="service">
+    <%= link_to '/#' do %>
+      <%= image_tag 'cloud-database.png' %><br/>
+      <span>Database Service</span>
+    <% end %>
+    </div>
+    <div class="service">
+    <%= link_to '/welcome' do %>
+      <%= image_tag 'cloud-data-storage.png' %><br/>
+      <span>Data Service</span>
+    <% end %>
+    </div>
+</div>
+
+<script type="text/javascript">
+$("#switch-service-button").click(showServicesList);
+
+function hideServicesList(){
+    var details = $('#services-list');
+    var courtain = $('#courtain');
+    if(details.hasClass('maximized')){
+        courtain.removeClass('active');
+        courtain.addClass('deactive');
+        details.removeClass('maximized');
+        details.addClass('minimized');
+    }
+}
+function showServicesList(){
+    var details = $('#services-list');
+    var courtain = $('#courtain');
+    if(details.hasClass('minimized')){
+        courtain.removeClass('deactive');
+        courtain.addClass('active');
+        details.removeClass('minimized');
+        details.addClass('maximized');
+    }
+}
+$(document).click(function(e) {
+    if (!$(e.target).is('#switch-service-button *')) {
+        hideServicesList();
+    }
+});
+</script>

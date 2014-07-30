@@ -1,0 +1,37 @@
+<%= provide(:background_color,'rgb(47,161,234)') %>
+<div class="registration heading text-center">
+  <%= link_to image_tag("bkloud.png"), root_path %>
+</div>
+
+<div class="back-holder">
+  <a href="/welcome">
+    <i class="glyphicon glyphicon-chevron-left"></i>
+  </a>
+  <span>Back</span>
+</div>
+
+<div class="signin_box">
+
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+    <div>
+      <%= f.email_field :email, :autofocus => true, :class => "form-control", :placeholder => "Enter Email" %>
+      <br/>
+    </div>
+
+    <div>
+      <%= f.password_field :password, :class => "form-control", :placeholder => "Password" %>
+      <br/>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+    <% end -%>
+
+    <div><%= f.submit "Sign in", :class => "btn btn-primary pull-right" %></div>
+  <% end %>
+
+  <%= render "users/shared/links" %>
+</div>
+
+

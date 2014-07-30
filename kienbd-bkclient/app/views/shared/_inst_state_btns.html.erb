@@ -1,0 +1,10 @@
+<div class='inst-state-action'>
+  <div class='btn-group'>
+    <a href='<%= start_instance_path(inst) %>' type='button' data-remote='true' class='btn btn-default <%= inst.canStart? ? '' : 'disabled' %>' style='width: 104px'>
+        <span class='glyphicon glyphicon-play'></span>Start
+    </a>
+    <a href='<%= shutdown_instance_path(inst) %>' type='button' data-remote='true' class='btn btn-default <%= inst.canStop? ? '' : 'disabled' %>'>
+        <span class='glyphicon glyphicon-pause'></span>Shutdown
+    </a>
+  </div>
+</div>

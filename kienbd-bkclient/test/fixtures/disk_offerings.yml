@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  disk_id: 1
+  disksize: MyString
+  storagetype: MyString
+
+two:
+  disk_id: 1
+  disksize: MyString
+  storagetype: MyString

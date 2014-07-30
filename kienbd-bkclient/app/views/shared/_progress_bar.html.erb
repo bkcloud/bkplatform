@@ -1,0 +1,28 @@
+<div class="clearfix"></div>
+<div class="progress-bar-holder">
+  <div class="progress progress-striped active registration-progress">
+    <div class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: <%= 33*(prg == 3 ? 2: prg) +1  %>%">
+      <span class="sr-only">45% Complete</span>
+    </div>
+
+    <% if prg == 3 %>
+      <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 33%">
+        <span class="sr-only">45% Complete</span>
+      </div>
+    <% end %>
+  </div>
+  <div class="progress-steps">
+
+    <div class="progress-step <%= prg > 1 ? "progress-step-finish" : "progress-step-active" %>">
+      <span class="step-number">1.</span><%= t('create_user') %>
+      <span class="glyphicon glyphicon-ok"></span>
+    </div>
+    <div class="progress-step <%= prg > 2 ? "progress-step-finish" : (prg == 2 ? "progress-step-active" : "") %>">
+      <span class="step-number">2.</span><%= t('create_instance') %>
+      <span class="glyphicon glyphicon-ok"></span>
+    </div>
+    <div class="progress-step <%= "progress-step-confirm" if prg == 3 %>">
+      <span class="step-number">3.</span><%= t('confirmation') %>
+    </div>
+  </div>
+</div>

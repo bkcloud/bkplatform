@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="bkclient">
+<head>
+  <title>BKCLOUD.NET</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "angular.min" %>
+  <%= javascript_include_tag "angular-resource.min" %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body style="background-color: <%= yield :background_color %>">
+
+<%= yield %>
+
+</body>

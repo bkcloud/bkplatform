@@ -1,0 +1,18 @@
+development:
+    url: "http://192.168.50.14:3000"
+    portal_url: "http://192.168.50.14:3000"
+    cas_url: "http://192.168.50.14/cas"
+    storage_url: "http://192.168.50.13"
+    database_url: "http://192.168.50.14:8888"
+    cas_url: "http://192.168.50.14/cas"
+production:
+    #url: "http://192.168.50.14/welcome"
+    #portal_url: "http://192.168.50.14"
+    #storage_url: "http://192.168.50.13"
+    #database_url: "http://192.168.50.14:8888"
+    #cas_url: "http://192.168.50.14/cas"
+    url: "http://bkcloud.net/bkclient"
+    portal_url: "http://bkcloud.net"
+    storage_url: "http://202.191.58.55"
+    database_url: "http://bkcloud.net:8888"
+    cas_url: "http://bkcloud.net/cas"

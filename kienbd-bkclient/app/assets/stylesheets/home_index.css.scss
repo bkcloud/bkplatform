@@ -1,0 +1,32 @@
+#index {
+  height: 100%;
+  #logo-wrapper {
+    padding: 50px 0;
+    text-align: center;
+    &.index {
+      padding-top: 50px;
+    }
+  }
+  .getting-started {
+    width: 200px;
+    display: inline-block;
+    margin-right: 20px;
+    button {
+      color: white;
+      font-weight: 100;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  .login-now {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    a {
+      font-weight: 100;
+    }
+  }
+
+
+}

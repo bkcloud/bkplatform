@@ -1,0 +1,27 @@
+<%= provide(:background_color,'rgb(47,161,234)') %>
+<div id="index">
+  <div id="logo-wrapper">
+    <%= link_to '/' do %>
+      <%= image_tag 'logo-welcome.png' %>
+    <% end %>
+  </div>
+
+
+  <div id="content">
+    <div class="contents getting-started">
+      <div class="left-col col">
+        <%= image_tag 'cloud-desktop.jpg' %>
+        <a href="/bkclient" class="btn btn-success btn-lg" style="font-weight: 200; display:block; width: 250px; margin: 0 auto;"><%= t('bkclient')%></a>
+      </div>
+      <div class="right-col col">
+        <%= image_tag 'cloud-database.png' %>
+        <a href="<%= APP_CONFIG['database_url'] %>" class="btn btn-success btn-lg" style="font-weight: 200; display:block; width: 250px; margin: 0 auto;"><%= t('bkdatabase')%></a>
+      </div>
+      <div class="middle-col col">
+        <%= image_tag 'cloud-data-storage.png' %>
+        <a href="<%= APP_CONFIG['storage_url'] %>" class="btn btn-success btn-lg" style="font-weight: 200; display:block; width: 250px; margin: 0 auto;"><%= t('bkstorage') %></a>
+      </div>
+    <div class="clearfix"></div>
+    </div>
+  </div>
+</div>

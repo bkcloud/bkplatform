@@ -1,0 +1,13 @@
+<div class="registration-forms-holder">
+  <div class="reg-form confirm-reg-form">
+    <div style="margin-left: 100px">
+      <h1> <%=t('finish_registration') %> </h1>
+      <h2> <%=t('an_email') %> <span style="font-style: italic;color:#428bca "><%= current_user.email %></span> <%=t('soon') %> </h2>
+      <h2> <%=t('view_instance_here') %> <a href="<%= instance_path(current_user.instance) %>"><span style="font-style: italic;color:#428bca "><%=t('here') %></span></a> </h2>
+    </div>
+  </div>
+
+</div>
+
+<%= render 'users/user_panel' %>
+<%= render partial: "shared/progress_bar",locals: {prg: 3} %>
