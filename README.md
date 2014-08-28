@@ -12,3 +12,6 @@ Step 2: Install BKDatabase
 Step 3: Install BKClient Portal 
 (see bkclient-portal/README.md)
 
+Mailling List
+=============
+bkcloud@googlegroups.com
